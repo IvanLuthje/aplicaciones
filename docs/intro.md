@@ -31,12 +31,12 @@ La computación movil gira básicamente en torno a 3 componentes tecnológicos q
 
 ## Atributos de la computación móvil
 
-- Ubicuidad: Todo el tiempo disponible.
-- Comodidad: El ambiente inalámbrico es confortable para el usuario.
-- Conectividad instantánea: Las conexiones a las redes inalámbricas son rápidas y sencillas.
-- Personalización de información útil para el usuario.
-- Localización de productos y servicios en base a la ubicación del usuario.
-- Entretenimiento: Actividades de ocio para el usuario.
+- **Ubicuidad**: Todo el tiempo disponible.
+- **Comodidad**: El ambiente inalámbrico es confortable para el usuario.
+- **Conectividad instantánea**: Las conexiones a las redes inalámbricas son rápidas y sencillas.
+- **Personalización de información útil para el usuario.**
+- **Localización de productos y servicios en base a la ubicación del usuario.**
+- **Entretenimiento:** Actividades de ocio para el usuario.
 
 ## Historia y evolución
 
