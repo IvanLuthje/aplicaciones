@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Diseño Responsivoducción
+# Introducción
 
 La computación movil es un término utilizado para describir el uso de computadoras sin necesidad de estar conectados físicamente a una red.
 

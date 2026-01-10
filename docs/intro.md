@@ -149,7 +149,104 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
     - Reducción del 90% en el consumo de energía de la red.
     - Hasta 10 años de duración de batería en los equipos de IoT de baja potencia.
 
+## Características de los dispositivos
+
+- Movilidad (Tamaño Reducido): Cualidad de un dispositivo para ser transladado o movido facilmente con frecuencia. Va de la mano con su tamaño, dado una cualdad de los dispositivos que son lo suficientemente pequeños para ser utilizados facilmente con 1 o 2 manos, sin necesidad de contar con soporte externo, mientras son transportados.
+- Capacidad de interacción inalámbrica: Capacidad de enviar y recibir datos por señales de RF, permitiendo la comunicación y/o acceso a red sin cables
+- Capacidad de interacción con personas: Proceso de uso que establece el usuario con el dispositivo. En el diseño del mismo, intervienen disciplinas como usabilidad y ergonomía.
+
+## Tecnología de escritorio vs movil
+
+Diferencias de dispositivos móviles con PCs:
+
+- Funcionalidad limitada
+- Corta durabilidad
+- Manejo menos complejo
+- Mas baratos
+- Aprendizaje rápido de uso
+- No requiere usuarios expertos
+
+## Crecimiento de la tecnología movil
+
+- Evolución de HW: La calidad de las pantallas, potencia de procesadores, capacidades de memoria y duración de batería cada vez mejores.
+- Cloud Computing: El traslado de los datos y aplicaciones a servidores de Internet, permite que se pueda tener la misma experiencia de uso con distintos dispositivos.
+- Avance de desarrollo de estructura de redes móviles
+- Capacidad de conexiones a periféricos: Los teléfonos pueden contar con salidas de videos por HDMI (Obsoleto) o USB-C para conectarlos en pantallas más grandes o los teclados tradicionales pueden conectarse por BT.
+
+## Conclusiones
+
+- Ventajas
+    - Movilidad
+    - Conectividad
+    - Aplicaciones
+    - GPS - Cámara - Micrófono
+    - Extensión de nuestra computadora
+- Desventajas
+    - Pérdida de señal
+    - Aplicaciones críticas
+    - Desarrollo diferente para cada dispositivo
+    - Pérdida, rotura del dispositivo, etc.
+
+## Aplicaciones móviles
+
+Las aplicaciones móviles es el concepto de programas diseñados para ejecutar en teléfonos, tablets y otros dispositivos móviles.
+
+Aparecieron en los años 90s, antes de la aparición de smartphones.
+
+- Estaban incluidas en el SO
+- Estaban enfocadas en mejorar la productividad: alarmas, calendarios, notas, etc.
+- Diseño simple y poco atractivo
+- Cumplian funciones muy basicas a comparación con la actualidad.
+
+Para esta fecha aún habían enormes restricciones por parte de los fabricantes, los Sistemas Operativos venían por defecto en los dispositivos, y evitaba que desarrolladores externos tuvieran la capacidad de incorporar nuevos elementos. Pero no faltaba mucho para que cambie.
+
+En el 2007, con la aparición del iPhone, cambia por completo la forma en la que veríamos los equipos móviles y por supuesto a las aplicaciones, que para ese entonces las sentíamos lejanas, poco prácticas y para nada relevantes. 
+El iPhone, además de su innovación, se convirtió en una plataforma para descargar aplicaciones de externos, sin los grandes militantes de los fabricantes en años anteriores, a través del App Store. Era un sueño hecho realidad para desarrolladores que deseaban ofrecer apps sin restricciones heredadas de los modelos anteriores. 
+De esta forma, se generan nuevos modelos de negocios donde las aplicaciones se convierten en algo rentable, tanto para los desarrolladores como para los mercados de aplicaciones: App Store, Play Store y hasta Windows Phone Store.
 
 
+## Aplicaciones móviles y las empresas
 
 
+Según un estudio realizado por la consultora Flurry Analytics, el usuario promedio pasa alrededor de 5 horas diarias en su teléfono y más de la mitad de este tiempo lo dedica a las apps. 
+Por lo que las aplicaciones:
+- Se convirtieron en el medio de comunicación entre las empresas y los clientes, rápido y efectivo.
+- Son un elemento de marketing y promoción, barato y que perdura más en el tiempo que las campañas de marketing.
+- Abarca desde sitios web que se adaptan a los móviles hasta apps que se descargan directamente en el mismo.
+- En la última década, se han posicionado como unas de las herramientas más eficaces para las empresas para promocionar productos y servicios, especialmente en el campo del e-commerce.
+
+En el año 2017 los ingresos a través de apps generaron un total de 76 mil millones de dólares.
+
+Mejoran las herramientas de desarrollo y diseño de aplicaciones. 
+
+Programadores pueden realizar sus propias aplicaciones y lanzarlas al mercado.
+
+## Desarrollo de aplicaciones móviles
+
+
+A la hora de desarrollar una aplicación móvil, hay factores que el programador debe tener en cuenta antes de comenzar la implementación.
+
+En base a las requerimientos de software definidas en la etapa de análisis. Se deber resolver distintas cuestiones que van a permitir definir al tipo de aplicación móvil que mejor se adapta a dichos requerimientos. 
+
+Es importante hacerse una serie de preguntas, para lograr identificar los factores relacionados directamente con el funcionamiento de la app.
+
+¿Cuáles son las funcionalidades principales y mínimas con las que va a contar? ¿necesita conexión a internet?, ¿requiero conocer la geolocalización del usuario? ¿va a tener un chat? ¿necesito una canal de pago? ¿voy a incluir un calendario?.
+
+Pero, cuando desarrollamos una aplicación móvil tenemos que tener en cuenta otros aspectos que con la programación Desktop no nos AFECTABA! Todos estos aspectos hacen a la usabilidad y la experiencia de usuario.
+
+NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
+
+## Aspectos para desarrollar aplicaciones móviles
+
+- Tamaño de mano
+- 1 o 2 manos
+- Usuario de la app
+- Donde se va a desarrollar
+- Tiempo de respuesta
+- Orientación de pantalla
+- UI
+- Manejo de sensores
+- Testing más complejo
+- Consumo de energía
+- Usabilidad
+- Seguridad
