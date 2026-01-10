@@ -250,3 +250,141 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
 - Consumo de energía
 - Usabilidad
 - Seguridad
+
+## Tipos de aplicaciones móviles
+
+- Aplicación Web: Son aplicaciones desarrolladas utilizando HTML, CSS y JS. No se distribuyen por medio de tiendas de aplicaciones, se comercializan y promocionan de manera independiente.
+
+    Ventajas
+        - Desarrollo más simple
+        - No es necesario instalar en el dispositivo, se utiliza en el navegador del mismo
+        - Multiplataforma, puede ejecutarse en cualquier dispositivo con acceso a internet
+        - Las actualizaciones pueden realizarse en cualquier momento y estar disponibles de inmediato
+        - Requieren menos recursos que una App no web
+        - Más rápido de poner en marcha
+        - Se pueden encontrar con los tradicionales buscadores
+        - No necesitan aprobación de ningún fabricante para ser publicadas
+    
+    Desventajas
+        - Siempre es necesario estar conectado a Internet
+        - Un sitio debe adaptarse a las medidas de un dispositivo movil
+        - Algunos de los navegadores móviles son extremadamente simples y básicos
+        - No puede acceder a recursos de dispostivos: cámara, acelerómetro, GPS, entre otros
+        - Un sitio web móvil es menos atractivo
+        - Es necesario conocer la URL
+        - La velocidad de ejecución es más lenta que las apps nativas
+
+
+- Aplicación nativa: Aplicaciones desarrolladas para una plataforma determinada, en un lenguaje y entorno de desarrollo específico.
+
+    Ejecutadas en un dispositivo y sistema operativo determinado.
+
+    El código fuente de estas aplicaciones se escribe en función de la plataforma de software. 
+
+    Este código fuente se compila a un ejecutable, en un proceso similar al de las tradicionales aplicaciones de escritorio. 
+
+    Cuando la aplicación está lista para ser distribuida, es subida a las App stores (tiendas de aplicaciones) específicas de cada dispositivo.
+
+    Ventajas
+        - Una vez subida la aplicación, las App Stores tiene un proceso de auditoría para evaluar si se adecúa a los requerimientos del sistema.
+        - Acceso total a todas las utilidades del dispositivo: almacenamiento, cámara, GPS, acelerómetro, agenda, etc. 
+        - Aplicación integrada al dispositivo, que puede interactuar con otras aplicaciones del dispositivo.
+        - Puede ejecutarse off line.
+        - Una aplicación puede utilizar toda la pantalla del dispositivo y proporcionar una mejor interfaz al usuario (consistente con el resto de las app del dispositivo)
+        - La aplicación puede correr en background, recuperar información de un servidor en segundo plano y notificar al usuario cuando la información esté disponible
+        - La aplicación puede ser más rápida que un sitio web móvil.
+        - Notificaciones en primer y segundo plano.
+
+    Desventajas
+        - Cada plataforma tiene su propio lenguaje de programación.
+        - El desarrollo es más costoso que el desarrollo de un sitio web móvil.
+        - Las aplicaciones no están disponibles para ser descargadas en todos los dispositivos móviles.
+        - Es más compleja la actualización de la aplicación.
+        - Fragmentación del mercado: La fragmentación externa significa que se desarrollan aplicaciones nativas para diferentes plataformas o sistemas operativos, tales como iOS y Android. Desarrollar para una plataforma puede significar quedar afuera de un alto % del mercado.
+        - Fragmentación interna: La aplicación se comporta o se presenta en diferentes versiones o en distintos dispositivos dentro de esa misma plataforma. Por ej: Android tiene un gran % del mercado pero actualmente existen varias versiones en uso.
+        - Para que un usuario pueda utilizar una aplicación primero debe descargársela, lo que requiere un mayor conocimiento y lealtad a la marca.
+
+    Desarrollar una app para la última versión lanzada de una plataforma es la solución más adecuada, debido a que mejora cuestiones de seguridad y compatibilidad en el futuro.
+
+- Aplicación híbrida: Reúne lo mejor de los dos modelos previos:
+
+    - Se desarrolla con lenguajes de programación de las web apps como HTML, CSS y JavaScript. 
+    - Multiplataforma.
+    - Brinda la posibilidad de acceder a las capacidades del dispositivo.
+    - La podemos ver como una aplicación web móvil que se comporta como una aplicación nativa.
+    - Una vez que la aplicación está terminada, se compila generando un ejecutable.
+    - La ejecución se realiza a través de una vista WebView, utilizada para visualizar el contenido en pantalla completa.
+
+    Ventajas
+
+    - Uso de los recursos del dispositivo y sistema operativo.
+    - Costo menor que una app nativa.
+    - Multiplataforma.
+    - Ejecución offline.
+    - Distribución mediante distintas plataformas.
+
+    Desventajas
+
+    - Performance es mayor que una web app pero menor que una aplicación nativa.
+    - Diseño visual puede estar afectado por el sistema operativo sobre el cual se ejecuta.
+
+## Sistemas operativos
+
+Un sistema operativo es un conjunto de programas de bajo nivel que permite la abstracción de las propiedades de hardware específicas de un teléfono móvil, gestiona todos los recursos del sistema, y brinda la capacidad de proveer servicios a las aplicaciones móviles, que se ejecutan sobre él.
+Los sistemas operativos móviles, en comparación con los de una computadora de escritorio (Windows/Linux), son más simples y están más orientados a la conectividad inalámbrica, los formatos multimedia y las diferentes maneras de introducir información en ellos.
+Hace un tiempo, la mayor competencia entre dispositivos se daba a nivel de Hardware. Hoy, se da desde el punto de vista del software.
+
+- Android 
+
+    - Es un software de código abierto completamente gratis, que se encuentra basado en Linux.
+    - Tiene soporte de HTML5, Adobe, entre otros.
+    - Puede adaptarse a diferentes resoluciones de pantalla sin problemas.
+    - Compatible con una gran cantidad de aplicaciones.
+    - Dispone de una gran variedad de teclados.
+    - Compatible con Google Talk para ejecutar las videollamadas.
+    - Es altamente personalizable.
+
+- iOS
+    - Es de código cerrado, lo que evita que pueda ser modificado por cualquiera.
+    - Monitoriza constantemente el consumo de la batería, lo que permite que pueda ser  gestionada de una forma más eficiente.
+    - Constantemente está siendo
+    - Cuenta con el asistente SIRI.
+
+
+## Entornos de desarrollo
+
+Desarrollar una aplicación móvil requiere de conocimientos de programación y tiempo de dedicación.
+Es probable, que al desarrollar una aplicación que queramos que nuestra aplicación sea multiplataforma, pero el problema es que cada sistema operativo tiene su lenguaje de programación.
+Recordando que el tipo de aplicación elegida, dependerá de las necesidades del negocio, las herramientas de desarrollo son muy variadas.
+
+
+- Web: Mediante las API de HTML5, JavaScript y CSS podemos garantizar que nuestro desarrollo va a funcionar sobre cualquier dispositivo que disponga de un navegador web basado en WebKit.
+La gran ventaja que presenta es que no es necesario conocer ningún lenguaje de programación complejo, con HTML, JavaScript y CSS es suficiente. Y para su desarrollo no requieren de un IDE de desarrollo específico.
+
+- Nativo: El conjunto de herramientas necesarias para realizar el desarrollo dependerá de la plataforma para la cual se quiere que ejecutar la aplicación.
+
+    - Xcode: Es un entorno de desarrollo integrado (IDE) creado por Apple para desarrollar aplicaciones (iOS, macOS, watchOS y tvOS). Proporciona un conjunto de herramientas para construir y probar aplicaciones. Una vez que se ha completado el desarrollo, Xcode permite empaquetar la aplicación y enviarla al App Store. 
+    Su editor de código permite diferentes lenguajes de programación como: C, C ++, Objective-C, Objective-C ++, Java, AppleScript, Python, Ruby, ResEdit y Swift.
+    Xcode solo se ejecuta en plataformas macOS.
+
+    -  Android Studio: IDE oficial para el desarrollo de aplicaciones Android, está basado en IntelliJ IDEA. 
+    Incorpora herramientas que ofrecen distintas funciones como: compilación flexible, entorno unificado para todos los dispositivos Android, integración con GitHub, identificador de problemas (rendimiento, usabilidad y compatibilidad) entre otras. 
+    Admite lenguajes de programación como Java y Kotlin.
+    Android Studio está disponible para plataformas de escritorio como Mac, Windows y Linux.
+- Hibrido: Existe un entorno de desarrollo preferente que es Apache Cordova. La mayoría de los entornos de desarrollo en HTML5 ofrecen opciones de integración con Cordova, a la vez que la cantidad de plugins disponible es muy elevado.
+
+    - Apache Cordova: Apache Cordova es la versión de código abierto del conocido PhoneGap. 
+    Este framework de desarrollo móvil permite utilizar tecnologías web como HTML5, CSS3 y JavaScript para crear aplicaciones multiplataforma (Android e iOS). 
+    Su API permite acceder a las capacidades de cada dispositivo, como sensores, datos, estados de red, etc. 
+    El despliegue de la interfaz se realiza mediante Web View.
+
+    - Ionic: Ionic es un framework gratuito y de código abierto para crear aplicaciones móviles. 
+    Utiliza tecnologías web (HTML, CSS y JavaScript) que le permiten exportar a múltiples plataformas, como Android e iOS. Todo esto es visualizado en los dispositivos mediante el Web View del sistema operativo.
+    Ionic tiene la particularidad de que se encuentra integrada con el framework Apache Córdoba, que le da el comportamiento de aplicación híbrida.
+
+    - React Native: Es un framework de código abierto creado por Facebook para el desarrollo de aplicaciones móviles multiplataforma (Android, iOS y UWP). Esta tecnología utiliza JavaScript como lenguaje de programación y permite utilizar componentes nativos.
+    Su finalidad es acercarse lo máximo posible a una experiencia nativa.
+
+
+    - Xamarin.Forms: Es un framework multiplataforma de código abierto creado por Microsoft para generar aplicaciones iOS, Android y Windows desde una única base de código compartida. 
+    Proporciona una API para crear elementos de interfaz en todas las plataformas mediante XAML y C#. Admite la vinculación de datos para patrones como Model-View-View-Model (MVVM).
