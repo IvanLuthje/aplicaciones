@@ -175,13 +175,14 @@ Diferencias de dispositivos móviles con PCs:
 
 ## Conclusiones
 
-- Ventajas
+**Ventajas**
     - Movilidad
     - Conectividad
     - Aplicaciones
     - GPS - Cámara - Micrófono
     - Extensión de nuestra computadora
-- Desventajas
+
+**Desventajas**
     - Pérdida de señal
     - Aplicaciones críticas
     - Desarrollo diferente para cada dispositivo
@@ -232,9 +233,11 @@ Es importante hacerse una serie de preguntas, para lograr identificar los factor
 
 ¿Cuáles son las funcionalidades principales y mínimas con las que va a contar? ¿necesita conexión a internet?, ¿requiero conocer la geolocalización del usuario? ¿va a tener un chat? ¿necesito una canal de pago? ¿voy a incluir un calendario?.
 
-Pero, cuando desarrollamos una aplicación móvil tenemos que tener en cuenta otros aspectos que con la programación Desktop no nos AFECTABA! Todos estos aspectos hacen a la usabilidad y la experiencia de usuario.
+Pero, cuando desarrollamos una aplicación móvil tenemos que tener en cuenta otros aspectos que con la programación Desktop **NO NOS AFECTABA!** 
 
-NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
+Todos estos aspectos hacen a la usabilidad y la experiencia de usuario.
+
+**NO ES IGUAL QUE EL DESARROLLO TRADICIONAL**
 
 ## Aspectos para desarrollar aplicaciones móviles
 
@@ -253,9 +256,9 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
 
 ## Tipos de aplicaciones móviles
 
-- Aplicación Web: Son aplicaciones desarrolladas utilizando HTML, CSS y JS. No se distribuyen por medio de tiendas de aplicaciones, se comercializan y promocionan de manera independiente.
+- **Aplicación Web**: Son aplicaciones desarrolladas utilizando HTML, CSS y JS. No se distribuyen por medio de tiendas de aplicaciones, se comercializan y promocionan de manera independiente.
 
-    Ventajas
+    **Ventajas**
         - Desarrollo más simple
         - No es necesario instalar en el dispositivo, se utiliza en el navegador del mismo
         - Multiplataforma, puede ejecutarse en cualquier dispositivo con acceso a internet
@@ -265,7 +268,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
         - Se pueden encontrar con los tradicionales buscadores
         - No necesitan aprobación de ningún fabricante para ser publicadas
     
-    Desventajas
+    **Desventajas**
         - Siempre es necesario estar conectado a Internet
         - Un sitio debe adaptarse a las medidas de un dispositivo movil
         - Algunos de los navegadores móviles son extremadamente simples y básicos
@@ -275,7 +278,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
         - La velocidad de ejecución es más lenta que las apps nativas
 
 
-- Aplicación nativa: Aplicaciones desarrolladas para una plataforma determinada, en un lenguaje y entorno de desarrollo específico.
+- **Aplicación nativa**: Aplicaciones desarrolladas para una plataforma determinada, en un lenguaje y entorno de desarrollo específico.
 
     Ejecutadas en un dispositivo y sistema operativo determinado.
 
@@ -285,7 +288,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
 
     Cuando la aplicación está lista para ser distribuida, es subida a las App stores (tiendas de aplicaciones) específicas de cada dispositivo.
 
-    Ventajas
+    **Ventajas**
         - Una vez subida la aplicación, las App Stores tiene un proceso de auditoría para evaluar si se adecúa a los requerimientos del sistema.
         - Acceso total a todas las utilidades del dispositivo: almacenamiento, cámara, GPS, acelerómetro, agenda, etc. 
         - Aplicación integrada al dispositivo, que puede interactuar con otras aplicaciones del dispositivo.
@@ -295,7 +298,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
         - La aplicación puede ser más rápida que un sitio web móvil.
         - Notificaciones en primer y segundo plano.
 
-    Desventajas
+    **Desventajas**
         - Cada plataforma tiene su propio lenguaje de programación.
         - El desarrollo es más costoso que el desarrollo de un sitio web móvil.
         - Las aplicaciones no están disponibles para ser descargadas en todos los dispositivos móviles.
@@ -306,7 +309,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
 
     Desarrollar una app para la última versión lanzada de una plataforma es la solución más adecuada, debido a que mejora cuestiones de seguridad y compatibilidad en el futuro.
 
-- Aplicación híbrida: Reúne lo mejor de los dos modelos previos:
+- **Aplicación híbrida:** Reúne lo mejor de los dos modelos previos:
 
     - Se desarrolla con lenguajes de programación de las web apps como HTML, CSS y JavaScript. 
     - Multiplataforma.
@@ -315,7 +318,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
     - Una vez que la aplicación está terminada, se compila generando un ejecutable.
     - La ejecución se realiza a través de una vista WebView, utilizada para visualizar el contenido en pantalla completa.
 
-    Ventajas
+    **Ventajas**
 
     - Uso de los recursos del dispositivo y sistema operativo.
     - Costo menor que una app nativa.
@@ -323,7 +326,7 @@ NO ES IGUAL QUE EL DESARROLLO TRADICIONAL
     - Ejecución offline.
     - Distribución mediante distintas plataformas.
 
-    Desventajas
+    **Desventajas**
 
     - Performance es mayor que una web app pero menor que una aplicación nativa.
     - Diseño visual puede estar afectado por el sistema operativo sobre el cual se ejecuta.
@@ -334,7 +337,7 @@ Un sistema operativo es un conjunto de programas de bajo nivel que permite la ab
 Los sistemas operativos móviles, en comparación con los de una computadora de escritorio (Windows/Linux), son más simples y están más orientados a la conectividad inalámbrica, los formatos multimedia y las diferentes maneras de introducir información en ellos.
 Hace un tiempo, la mayor competencia entre dispositivos se daba a nivel de Hardware. Hoy, se da desde el punto de vista del software.
 
-- Android 
+- **Android** 
 
     - Es un software de código abierto completamente gratis, que se encuentra basado en Linux.
     - Tiene soporte de HTML5, Adobe, entre otros.
@@ -344,7 +347,7 @@ Hace un tiempo, la mayor competencia entre dispositivos se daba a nivel de Hardw
     - Compatible con Google Talk para ejecutar las videollamadas.
     - Es altamente personalizable.
 
-- iOS
+- **iOS**
     - Es de código cerrado, lo que evita que pueda ser modificado por cualquiera.
     - Monitoriza constantemente el consumo de la batería, lo que permite que pueda ser  gestionada de una forma más eficiente.
     - Constantemente está siendo
@@ -358,33 +361,33 @@ Es probable, que al desarrollar una aplicación que queramos que nuestra aplicac
 Recordando que el tipo de aplicación elegida, dependerá de las necesidades del negocio, las herramientas de desarrollo son muy variadas.
 
 
-- Web: Mediante las API de HTML5, JavaScript y CSS podemos garantizar que nuestro desarrollo va a funcionar sobre cualquier dispositivo que disponga de un navegador web basado en WebKit.
+- **Web**: Mediante las API de HTML5, JavaScript y CSS podemos garantizar que nuestro desarrollo va a funcionar sobre cualquier dispositivo que disponga de un navegador web basado en WebKit.
 La gran ventaja que presenta es que no es necesario conocer ningún lenguaje de programación complejo, con HTML, JavaScript y CSS es suficiente. Y para su desarrollo no requieren de un IDE de desarrollo específico.
 
-- Nativo: El conjunto de herramientas necesarias para realizar el desarrollo dependerá de la plataforma para la cual se quiere que ejecutar la aplicación.
+- **Nativo**: El conjunto de herramientas necesarias para realizar el desarrollo dependerá de la plataforma para la cual se quiere que ejecutar la aplicación.
 
-    - Xcode: Es un entorno de desarrollo integrado (IDE) creado por Apple para desarrollar aplicaciones (iOS, macOS, watchOS y tvOS). Proporciona un conjunto de herramientas para construir y probar aplicaciones. Una vez que se ha completado el desarrollo, Xcode permite empaquetar la aplicación y enviarla al App Store. 
+    - **Xcode**: Es un entorno de desarrollo integrado (IDE) creado por Apple para desarrollar aplicaciones (iOS, macOS, watchOS y tvOS). Proporciona un conjunto de herramientas para construir y probar aplicaciones. Una vez que se ha completado el desarrollo, Xcode permite empaquetar la aplicación y enviarla al App Store. 
     Su editor de código permite diferentes lenguajes de programación como: C, C ++, Objective-C, Objective-C ++, Java, AppleScript, Python, Ruby, ResEdit y Swift.
     Xcode solo se ejecuta en plataformas macOS.
 
-    -  Android Studio: IDE oficial para el desarrollo de aplicaciones Android, está basado en IntelliJ IDEA. 
+    -  **Android Studio**: IDE oficial para el desarrollo de aplicaciones Android, está basado en IntelliJ IDEA. 
     Incorpora herramientas que ofrecen distintas funciones como: compilación flexible, entorno unificado para todos los dispositivos Android, integración con GitHub, identificador de problemas (rendimiento, usabilidad y compatibilidad) entre otras. 
     Admite lenguajes de programación como Java y Kotlin.
     Android Studio está disponible para plataformas de escritorio como Mac, Windows y Linux.
-- Hibrido: Existe un entorno de desarrollo preferente que es Apache Cordova. La mayoría de los entornos de desarrollo en HTML5 ofrecen opciones de integración con Cordova, a la vez que la cantidad de plugins disponible es muy elevado.
+- **Hibrido**: Existe un entorno de desarrollo preferente que es Apache Cordova. La mayoría de los entornos de desarrollo en HTML5 ofrecen opciones de integración con Cordova, a la vez que la cantidad de plugins disponible es muy elevado.
 
-    - Apache Cordova: Apache Cordova es la versión de código abierto del conocido PhoneGap. 
+    - **Apache Cordova**: Apache Cordova es la versión de código abierto del conocido PhoneGap. 
     Este framework de desarrollo móvil permite utilizar tecnologías web como HTML5, CSS3 y JavaScript para crear aplicaciones multiplataforma (Android e iOS). 
     Su API permite acceder a las capacidades de cada dispositivo, como sensores, datos, estados de red, etc. 
     El despliegue de la interfaz se realiza mediante Web View.
 
-    - Ionic: Ionic es un framework gratuito y de código abierto para crear aplicaciones móviles. 
+    - **Ionic**: Ionic es un framework gratuito y de código abierto para crear aplicaciones móviles. 
     Utiliza tecnologías web (HTML, CSS y JavaScript) que le permiten exportar a múltiples plataformas, como Android e iOS. Todo esto es visualizado en los dispositivos mediante el Web View del sistema operativo.
     Ionic tiene la particularidad de que se encuentra integrada con el framework Apache Córdoba, que le da el comportamiento de aplicación híbrida.
 
-    - React Native: Es un framework de código abierto creado por Facebook para el desarrollo de aplicaciones móviles multiplataforma (Android, iOS y UWP). Esta tecnología utiliza JavaScript como lenguaje de programación y permite utilizar componentes nativos.
+    - **React Native:** Es un framework de código abierto creado por Facebook para el desarrollo de aplicaciones móviles multiplataforma (Android, iOS y UWP). Esta tecnología utiliza JavaScript como lenguaje de programación y permite utilizar componentes nativos.
     Su finalidad es acercarse lo máximo posible a una experiencia nativa.
 
 
-    - Xamarin.Forms: Es un framework multiplataforma de código abierto creado por Microsoft para generar aplicaciones iOS, Android y Windows desde una única base de código compartida. 
+    - **Xamarin.Forms**: Es un framework multiplataforma de código abierto creado por Microsoft para generar aplicaciones iOS, Android y Windows desde una única base de código compartida. 
     Proporciona una API para crear elementos de interfaz en todas las plataformas mediante XAML y C#. Admite la vinculación de datos para patrones como Model-View-View-Model (MVVM).
