@@ -4,98 +4,183 @@ sidebar_position: 2
 
 # HTML
 
- Lenguaje en el cual se escriben las páginas web, que es interpretado por navegadores para dibujar y mostrar el contenido de la página web a los usuarios. Es un lenguaje de etiquetas, ya que todos los elementos que definen los componentes que forman parte de la página web se definen a partir de etiquetas.
+ Lenguaje en el cual se escriben las páginas web, que es interpretado por navegadores para dibujar y mostrar el contenido de la página web a los usuarios. 
+ 
+ Es un lenguaje de etiquetas, ya que todos los elementos que definen los componentes que forman parte de la página web se definen a partir de etiquetas.
 
 Se crea el estandar CSS para separar el diseño del contenido.
+
+## Etiquetas
 
 Se definen estas etiquetas para definir los distintos elementos y secciones que componen un documento HTML como párrafos, enlaces, imágenes, listas, tablas, encabezados, cuerpo y pie de página, etc.
 
 Las etiquetas se indican por pares y se indican de la siguiente forma:
 
-Apertura etiqueta y Cierre /etiqueta
+```
+<etiqueta>  Apertura
 
-Un elemento **NO ES LO MISMO QUE UNA ETIQUETA, PERO UNA ETIQUETA DEFINE AL ELEMENTO,** está formado por etiquetas de apertura y cierre, atributos y contenido.
+</etiqueta> Cierre
+```
 
-**p class='nombre_clase'Párrafo/p** 
 
-donde **p** es la etiqueta de inicio, la clase es un atributo, el valor de la clase o atributo y la palabra Párrafo es el contenido.
+
+## Atributos
 
 Hay cuatro tipos de atributos:
 
-- Básicos: Se pueden utilizar con todas las etiquetas: id, class, style, title
-- Internalización: Se usan para mostrar el contenido en distintos idiomas: lang
-- Eventos: Acciones dinámicas sobre los elementos onChange, onClick, onFocus
-- Atributos en foco: Accesibilidad
+- **Básicos**: Se pueden utilizar con todas las etiquetas: id, class, style, title
+- **Internalización**: Se usan para mostrar el contenido en distintos idiomas: lang
+- **Eventos**: Acciones dinámicas sobre los elementos onChange, onClick, onFocus
+- **Atributos en foco**: Accesibilidad
 
-**Doctype:** Permite mostrar la página correctamente ya que existen distintos tipos de documentos HTML, a partir de HTML5 se declara 
+## Estructura del documento HTML
 
-DOCTYPE html
+Un documento HTML se divide en dos secciones:
 
-**h1-6:** Son los títulos de sección y permite dividir las páginas en secciones jerárquicas, h1 es la sección de mayor importancia y h6 es la de menor importancia. Ayuda a los navegadores para indexar estructura y contenido de las páginas 
 
- **p:** Etiqueta que define párrafos, varios espacios seguidos se consideran como uno y varias lineas seguidas son consideradas como una. El navegador elimina espacios y lineas extras antes de mostrar contenido al usuario.
+**Encabezado**: incluye información sobre la propia página.
+Delimitado por la etiqueta ```<head>```
+Contiene información sobre el propio documento HTML, y no es visible por el usuario.
+Incluye los siguientes datos: 
 
-**a:** Etiqueta para definir enlaces (hipervínculos), el link es el elemento principal para el hipertexto. Mediante un click permite acceder a otros documentos y/o a otros recursos web. Existen distintos tipos de enlaces: locales, externos o internos al documento. Se puede definir sobre un texto, imagen y otro elemento HTML. href indica la URL del recurso que se va a enlazar.
+- Enlaces a archivos externos como estilos de hojas CSS.
+- Información sobre el documento.
+- Metadatos.
+- Título de la página – obligatorio.
+- Scripts.
 
-**URL absolutas:** URL completa
 
-**URL relativas:** Se construyen a partir de las absolutas y prescinde de algunas partes como protocolo y servidor.
+**Body**: contiene todo lo que el usuario ve en pantalla. Delimitado por la etiqueta ```<body>```. En esta etiqueta se definen propiedades comunes a toda la página. Contiene las partes del documento que será mostrado por el navegador. Esta sección es la que puede ver el usuario.
 
-**Links Locales:** Son enlaces a documentos del mismo sitio web
+La etiqueta ```<html>``` indica el comienzo y el fin del documento. Ninguna etiqueta o contenido puede colocarse fuera de esa sección. En su interior se definen la cabecera y el cuerpo del documento. Esta estructura jerárquica va formando un árbol donde la raíz es el tag ```<html>```, forman lo que se denomina DOM.
 
-**Links Externos:** Se dirigen a otro documento perteneciente a otro sitio web (URL absoluta)
 
-**Links Internos:** Son enlaces que permiten el desplazamiento sobre el mismo documento, para ir a una sección específica de la página
+## Tipo de documento
+
+**Doctype:** Permite mostrar la página correctamente ya que existen distintos tipos de documentos HTML, a partir de HTML5 se declara ```<!DOCTYPE html>```
+
+## Elementos
+
+Un elemento **NO ES LO MISMO QUE UNA ETIQUETA, PERO UNA ETIQUETA DEFINE AL ELEMENTO,** está formado por etiquetas de apertura y cierre, atributos y contenido.
+```
+
+<p class='nombre_clase'>Párrafo</p> 
+
+```
+donde **p** es la etiqueta de inicio, la clase es un atributo, el valor de la clase o atributo y la palabra Párrafo es el contenido.
+
+### Sección
+
+```<h1-6>``` Son los títulos de sección y permite dividir las páginas en secciones jerárquicas, h1 es la sección de mayor importancia y h6 es la de menor importancia. Ayuda a los navegadores para indexar estructura y contenido de las páginas 
+
+### Párrafos
+
+```<p>``` Etiqueta que define párrafos, varios espacios seguidos se consideran como uno y varias lineas seguidas son consideradas como una. El navegador elimina espacios y lineas extras antes de mostrar contenido al usuario.
+
+### Enlaces
+
+```<a>``` Etiqueta para definir enlaces (hipervínculos), el link es el elemento principal para el hipertexto. Mediante un click permite acceder a otros documentos y/o a otros recursos web. Existen distintos tipos de enlaces: locales, externos o internos al documento. Se puede definir sobre un texto, imagen y otro elemento HTML. href indica la URL del recurso que se va a enlazar.
+
+#### URL
+
+  **URL absolutas:** URL completa
+
+  **URL relativas:** Se construyen a partir de las absolutas y prescinde de algunas partes como protocolo y servidor.
+
+#### Tipos de enlaces
+
+  **Links Locales:** Son enlaces a documentos del mismo sitio web
+
+  **Links Externos:** Se dirigen a otro documento perteneciente a otro sitio web (URL absoluta)
+
+  **Links Internos:** Son enlaces que permiten el desplazamiento sobre el mismo documento, para ir a una sección específica de la página
 
 **Bookmarks:** Se utilizan para sitios web con páginas extensas, se define la etiqueta name, se crea el bookmark y luego se enlaza a la sección correspondiente. Cuando el link se clickea, la página automáticamente hace scroll hacia la ubicación de ese bookmark. Se utiliza href seguido de # con el nombre de la sección.
 
+### Imágenes
+
 **img:** Se utiliza para definir imágenes, es una etiqueta vacía que no necesita cerrarse. Se define el atributo **src** para definir la URL de la imagen que se va a mostrar y el atributo **alt** para definir un texto alternativo para la descripción de la imagen.
 
-**Listas:** ul lista desordenada, ol lista ordenada y dl lista de definiciones, donde es una lista de términos con descripción para c/u de ellos y las anidadas, que son listas dentro de otras.
+### Listas
 
-li list item: Esta etiqueta se define para cada item de la lista.
 
-**Tablas (deprecado):** Se definen con la etiqueta table. Las filas se crean utilizando tr, las columnas que contienen los datos td, el encabezado de la tabla con th, el tag caption para agregar titulo a la tabla inmediatamente despues del tag table y la celda vacía se define como **td&nbsp;/td. Se utilizaban antiguamente para definir la estructura de páginas web.**
+```<ul>``` lista desordenada, ```<ol>``` lista ordenada y ```<dl>``` lista de definiciones, donde es una lista de términos con descripción para c/u de ellos y las anidadas, que son listas dentro de otras.
 
-**Elementos en bloque vs Elementos en linea:** Todos los elementos HTML tienen un modo de visualización de acuerdo al tipo de elemento que es.
+```<li>``` (list item): Esta etiqueta se define para cada item de la lista.
+
+### Tablas (deprecado)
+
+Se definen con la etiqueta table. Las filas se crean utilizando tr, las columnas que contienen los datos td, el encabezado de la tabla con th, el tag caption para agregar titulo a la tabla inmediatamente despues del tag table y la celda vacía se define como ```<td>```,```</td>```. Se utilizaban antiguamente para definir la estructura de páginas web.**
+
+### Elementos en bloque vs Elementos en linea
+
+Todos los elementos HTML tienen un modo de visualización de acuerdo al tipo de elemento que es.
 
 Existen dos tipos de elementos, su diferencia radica en la forma que ocupan el espacio disponible en pantalla.
 
-- **Elementos de bloque:** Comienzan en una nueva línea y ocupan todo el ancho disponible **div - p - form**
-- **Elementos en línea:** No necesariamente comienzan en una nueva línea y sólo ocupan el ancho que necesitan **span - a - img**
+- **Elementos de bloque:** Comienzan en una nueva línea y ocupan todo el ancho disponible ```<div> - <p> - <form>```
+- **Elementos en línea:** No necesariamente comienzan en una nueva línea y sólo ocupan el ancho que necesitan ```<span> - <a> - <img>```
 
 **div**: Elemento de bloque para definir zonas o divisiones de una página web, utilizado también como un elemento contenedor de otros elementos HTML. No tiene atributos obligatorios.
 
 **span**: Elemento en línea, funciona como un contenedor de textos. No tiene atributos obligatorios.
 
-**Atributos globales:** Pueden ser configurados en todos los elementos HTML mencionados, los más importantes son:
 
-- Id: Permite identificar a un elemento específico del documento, por lo que deben ser únicos.
-- Class: Se utilizan para agrupar elementos con características y propiedades comunes.
-- Style: Agregar propiedades CSS a un elemento. Se utiliza en la etapa de diseño para realizar pruebas. No es recomendable pasarlo a producción, para ello se define un archivo CSS.
 
-**Layout:** Representa estructura básica del sitio, define la disposición general de los elementos comunes a todas o a la mayoría de las páginas que conformar el sitio web. Se dividen en bloques o secciones.
+## Atributos globales
 
-Modos de armar el layout:
+Pueden ser configurados en todos los elementos HTML mencionados, los más importantes son:
 
-- **Mediante tablas:** Las filas y columnas se utilizaban para representar las distintas secciones. Se definían al menos tres filas: una para la cabecera, otra para el menú y los contenidos, y la última para el pie de página. Este modelo quedó obsoleto.
-- **Mediante contenedores Div y Span:** Estos elementos son fácilmente manipulables desde CSS. Por lo que principalmente son aptos para el diseño responsivo. Se lograron las siguientes mejoras: Mantenimiento, Velocidad de carga y Diseño.
+**Id:** Permite identificar a un elemento específico del documento, por lo que deben ser únicos.
 
-**Tags semánticos**: Se utilizan para reemplazar los contenedores div y span para separar los contenidos del sitio. Son elementos con un significado propio que describen claramente su contenido. Un tag semántico no fue diseñado para estructurar el layout sino para ayudar al programador a identificar las distintas secciones del documento HTML.
+**Class:** Se utilizan para agrupar elementos con características y propiedades comunes.
 
-**Header:** Encabezados, pueden haber varios en un mismo documento, en el cual contiene elementos de identidad, logos y nombre de la organización y eslóganes y elementos de navegación el sitio.
+**Style:** Agregar propiedades CSS a un elemento. Se utiliza en la etapa de diseño para realizar pruebas. No es recomendable pasarlo a producción, para ello se define un archivo CSS.
 
-**Nav:** Define el menú principal de navegación del sitio, por lo tanto, define un conjunto de links para navegar hacia otras secciones o páginas del sitio. Se utiliza para bloques de navegación dentro de un documento.
+## Layout
 
-**Main:** Contenido principal de la página y es el contenedor del elemento section, es único y agrupa justo el contenido deseado y no se permite agrupar elementos como anuncios y barras laterales.
 
-**Section:** Permite agrupar contenido relacionado, representa una sección del documento con elementos del mismo tema.
+Representa estructura básica del sitio, define la disposición general de los elementos comunes a todas o a la mayoría de las páginas que conformar el sitio web. Se dividen en bloques o secciones.
 
-**Article:** Similar a la sección que por sí solo tiene razón de ser y significado. Por ejemplo: post de "blogs", artículos de una revista digital, noticias de un periódico digital y opiniones de un foro.
+### Modos de armar el layout
 
-**Aside:** Contenido menos importante del sitio, se define como barra lateral de una página web. Utilizado para calendarios, publicidad, notas, redes sociales relacionadas, info de contacto, etc.
+**Mediante tablas:** Las filas y columnas se utilizaban para representar las distintas secciones. Se definían al menos tres filas: una para la cabecera, otra para el menú y los contenidos, y la última para el pie de página. Este modelo quedó obsoleto.
 
-**Footer:** Pie de página, en la cual se define información como contacto, derechos de autor y avisos legales. Al igual que el header pueden haber varios en el mismo documento.
+**Mediante contenedores Div y Span:** Estos elementos son fácilmente manipulables desde CSS. Por lo que principalmente son aptos para el diseño responsivo. Se lograron las siguientes mejoras: Mantenimiento, Velocidad de carga y Diseño.
+
+## Tags semánticos
+
+Se utilizan para reemplazar los contenedores div y span para separar los contenidos del sitio. Son elementos con un significado propio que describen claramente su contenido. Un tag semántico no fue diseñado para estructurar el layout sino para ayudar al programador a identificar las distintas secciones del documento HTML.
+
+### Header
+
+Encabezados, pueden haber varios en un mismo documento, en el cual contiene elementos de identidad, logos y nombre de la organización y eslóganes y elementos de navegación el sitio.
+
+### Nav
+
+Define el menú principal de navegación del sitio, por lo tanto, define un conjunto de links para navegar hacia otras secciones o páginas del sitio. Se utiliza para bloques de navegación dentro de un documento.
+
+### Main 
+
+Contenido principal de la página y es el contenedor del elemento section, es único y agrupa justo el contenido deseado y no se permite agrupar elementos como anuncios y barras laterales.
+
+### Section 
+
+Permite agrupar contenido relacionado, representa una sección del documento con elementos del mismo tema.
+
+### Article 
+
+Similar a la sección que por sí solo tiene razón de ser y significado. Por ejemplo: post de "blogs", artículos de una revista digital, noticias de un periódico digital y opiniones de un foro.
+
+### Aside
+
+Contenido menos importante del sitio, se define como barra lateral de una página web. Utilizado para calendarios, publicidad, notas, redes sociales relacionadas, info de contacto, etc.
+
+### Footer
+
+Pie de página, en la cual se define información como contacto, derechos de autor y avisos legales. Al igual que el header pueden haber varios en el mismo documento.
+
+## Formularios
 
 **Form:** Etiqueta que define un formulario, son usados para recolectar datos que ingresa el usuario para que posteriormente sean procesados, permiten enviar requerimientos con estos datos al servidor. 
 
@@ -129,15 +214,17 @@ Modos de armar el layout:
 
 **optgroup:** Elemento que permite agrupar opciones relacionadas dentro de la lista desplegable. Los atributos son:
 
-value (texto): Definir el valor a ser enviado por el servidor
+**value (texto): **Definir el valor a ser enviado por el servidor
 
-selected: Indica que la opción es preseleccionada
+**selected:** Indica que la opción es preseleccionada
 
-disabled: Opción deshabilitada
+**disabled:** Opción deshabilitada
 
-label (texto): Define un rótulo breve para una opción
+**label (texto): **Define un rótulo breve para una opción
 
-fieldset: Elemento que permite agrupar elementos relacionados dentro de un mismo formulario.
+**fieldset: **Elemento que permite agrupar elementos relacionados dentro de un mismo formulario.
+
+## Elementos del encabezado
 
 **Head:** Se encuentran relacionados con el propio documento HTML y no con su contenido, permiten definir:
 
@@ -176,7 +263,7 @@ fieldset: Elemento que permite agrupar elementos relacionados dentro de un mismo
 - Se pueden detectar direcciones postales y de correo con la misma técnica
 - Sirve con Android y iOS
 
-**Cambios de HTML5**
+## Cambios de HTML5
 
 - La declaración del documento es muy simple: DOCTYPE html
 - Se incorporan los elementos semánticos: header - main - section - article - aside - footer
@@ -184,7 +271,7 @@ fieldset: Elemento que permite agrupar elementos relacionados dentro de un mismo
 - Se puede complementar con otras apis: Geolocation y LocalStorage
 - Se agregan archivos multimedia de audio y video
 
-**XHTML**
+## XHTML
 
 - Es una remodelación HTML, una versión más robusta.
 - Es una adaptación de HTML al lenguaje XML.
@@ -201,38 +288,3 @@ fieldset: Elemento que permite agrupar elementos relacionados dentro de un mismo
 
 
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    Layout
-      h1My React page/h1
-      pThis is a React page/p
-    /Layout
-  );
-}
-```
-
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
-
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
-
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
-```
-
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).

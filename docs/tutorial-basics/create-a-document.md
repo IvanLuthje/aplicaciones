@@ -4,11 +4,15 @@ sidebar_position: 3
 
 # CSS
 
-**CSS:** Lenguaje de hojas de estilos creado para controlar la presentación y aspecto de los documentos HTML. Es la mejor forma de separar el contenido de la página web de su presentación. Definido como un estándar por la W3C. En el CSS se puede definir como se muestran los elementos del documento HTML, como por ejemplo color, tamaño, tipo de letra, separación horizontal y vertical entre elementos, posición de cada elemento en la pantalla, etc.
+Lenguaje de hojas de estilos creado para controlar la presentación y aspecto de los documentos HTML. 
+
+Es la mejor forma de separar el contenido de la página web de su presentación. Definido como un estándar por la W3C. En el CSS se puede definir como se muestran los elementos del documento HTML, como por ejemplo color, tamaño, tipo de letra, separación horizontal y vertical entre elementos, posición de cada elemento en la pantalla, etc.
 
 El CSS obliga a crear documentos HTML semánticos, mejoran la accesibilidad del documento, reduce la complejidad de su mantenimiento, visualizar el mismo documento en dispositivos diferentes y se puede controlar el estilo y formato de múltiples páginas simultáneamente.
 
 Esta forma de definir el aspecto de los elemento no es la más adecuada, ya que si tuviéramos una página con 50 elementos, habría que insertar 50 etiquetas Font, del mismo modo si un sitio web se compone de 10.000 etiquetas, habrá que definir 10.000 atributos
+
+## Inserción en documentos
 
 Con CSS se pueden establecer los mismos estilos con menor esfuerzo y sin ensuciar el código HTML de los contenidos.
 
@@ -18,7 +22,16 @@ Flexibilidad y diferentes opciones para hacer una misma tarea. Existen al menos 
 - **Incluir CSS dentro del documento HTML:** Se define dentro del head con la etiqueta style y se utiliza cuando un número pequeño de estilos se definen sobre un único documento. Soluciona el problema anterior pero se aplica solamente en un solo documento.
 - **Definir CSS en un archivo externo (Recomendado):** Se definen en un archivo de extensión .css y el nombre del archivo se define dentro del head por medio de la etiqueta link. El mantenimiento se simplifica al máximo y se puede utilizar en todos los documentos indicando ese archivo .css.
 
+## Componentes
+
+
 La regla de CSS está conformada por Selectores (Nombre del elemento, pueden ser varios) y Declaraciones (propiedades del elemento con sus respectivos valores)
+
+```
+h1{font-size:15px;} 
+// h1, corresponde al selector, font-size la propiedad con su respectivo valor y {} declaración
+```
+
 
 Los selectores disponibles son:
 
@@ -28,6 +41,8 @@ Los selectores disponibles son:
 - Selector de ID (#): Selecciona un único elemento HTML a partir de un atributo ID
 - Clase (.): Selecciona los elementos HTML con el atributo class.
 - Comentarios: Describir de manera breve y estructurar de manera clara los archivos CSS complejos.
+
+## Múltiples estilos en cascada
 
 Para resolver colisiones de estilos se siguen estas reglas:
 
@@ -41,28 +56,107 @@ Para resolver colisiones de estilos se siguen estas reglas:
 - Ordenar las declaraciones según lo especíico que sea el selector (mas especifico - menor importancia)
 - A igual especificidad la propiedad queda determinada por el orden que se procesan, se tomará la última regla.
 
-**Modelo de Cajas:** Una de las características más importantes del lenguaje, es un comportamiento CSS que hace que todos los elementos de la página se representen mediante cajas rectangulares, estas cajas se crean automáticamente cada vez que se define una etiqueta HTML. Los navegadores son los que crean y colocan las cajas automáticamente y con CSS se pueden modificar todas o algunas de sus características.
+## Modelo de Cajas
 
-- Margin: Area transparente alrededor del borde que permite separar las cajas con el resto de las cajas subyacentes.
-- Border: Linea que encierra completamente el contenido y el padding. Afectado por el background-color de la caja.
-- Padding: Area vacía alrededor del contenido. Afectado por el background-color
-- Contenido: Espacio que contiene elementos HTML.
+ Una de las características más importantes del lenguaje, es un comportamiento CSS que hace que todos los elementos de la página se representen mediante cajas rectangulares, estas cajas se crean automáticamente cada vez que se define una etiqueta HTML. Los navegadores son los que crean y colocan las cajas automáticamente y con CSS se pueden modificar todas o algunas de sus características.
 
-**Dimensiones de los elementos:** Unidades para representar la altura, ancho y márgenes de los elementos y para el tamaño de las letras de un texto, son relativas.
+ **Margin**: Area transparente alrededor del borde que permite separar las cajas con el resto de las cajas subyacentes.
+
+ **Border**: Linea que encierra completamente el contenido y el padding. Afectado por el background-color de la caja.
+
+ **Padding**: Area vacía alrededor del contenido. Afectado por el background-color
+
+ **Contenido**: Espacio que contiene elementos HTML.
+
+## Propiedades de CSS
+
+**Width-Height:** Se utilizan para controlar el ancho y el alto de los elementos, permitiendo definir las dimensiones del área que tiene el contenido de la caja.
+
+- No admiten valores negativos, y los valores en porcentajes se calculan en base al ancho de su elemento padre.
+
+- El valor “auto” determina que el navegador debe calcular automáticamente las dimensiones.
+
+- Se puede establecer el ancho y altura mínima y máxima de un elemento mediante las propiedades: min-width, max-width, min-height y max-height
+
+
+**Margin:** Se definen cuatro propiedades internas para controlar cada uno de los márgenes horizontales y verticales de un elemento.
+Cada una de ellas representa la separación entre los bordes laterales de la caja con las demás cajas adyacentes.
+- Los márgenes verticales sólo se pueden aplicar a los elementos de bloque e imágenes, mientras que los márgenes laterales se aplican a cualquier elemento
+- Mediante la propiedad “margin” se puede definir los cuatro márgenes de manera simultánea
+
+**Padding:** Se definen cuatro propiedades
+internas para controlar cada uno
+de los espacios de relleno 
+horizontales y verticales de un
+elemento.
+Cada una de ellas representa
+la separación entre el contenido 
+y los bordes laterales de la caja. 
+
+- Se aplica a todos los elementos excepto a los grupos de cabeceras y de pie de tablas.
+- Mediante la propiedad “padding” se puede definir las cuatro propiedades de manera simultánea.
+
+**Border:** Permite modificar el aspecto de cada uno de 
+los cuatro bordes de la caja de un elemento.
+Se puede establecer su anchura, su color y 
+su estilo.
+Algunas consideraciones:
+- Se aplica a todos los elementos.
+- Mediante la propiedad “border” se pueden definir todas las propiedades de manera simultánea.
+
+**Outline:** Representa una línea que se dibuja 
+afuera del elemento y alrededor del 
+borde de un elemento.
+No forma parte de las dimensiones 
+del objeto.
+
+ ## Observaciones
+
+- El ancho y altura total de un elemento se calcula no solamente por propiedades width y height, sino tambien por margin, padding y border
+
+
+```css
+div{
+    width: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 10px solid black;
+}
+```
+
+El ancho total será de 300+50+50+30+30+10=480px
+
+La altura total será de 300+10+10=320px
+
+- Un motivo que puede traer problemas es la incompatibilidad que existe entre los distintos navegadores
+De acuerdo a la versión del navegador hay 2 modos de funcionamiento:
+
+    **Modo Quirks:** Son aquellos que no son compatibles con los estándares publicados por la W3C.
+
+    **Modo Estándar:** Son compatibles con los nuevos estándares
+
+    Su diferencia se encuentra en el tratamiento sobre del modelo de cajas que influye sobre el diseño de la página.
+    Los navegadores en modo Quirk consideran que el ancho del elemento (propiedad Width) incluye tanto el padding como los bordes.
+
+## Dimensiones de los elementos 
+
+Unidades para representar la altura, ancho y márgenes de los elementos y para el tamaño de las letras de un texto, son relativas.
 
 **Em:** Tamaño de letra de un elemento.
 
 **Px:** Tamaño de resolución de pantalla del dispositivo.
 
-**%:** Referencia a otra medida. Se utiliza para establecer el ancho de un elemento, la referencia será en proporción del elemento padre.
+**%:** Referencia a otra medida. Se utiliza para establecer el ancho de un elemento, la referencia será en proporción con la anchura del elemento padre.
 
 Las dimensiones se pueden definir de acuerdo a las siguientes reglas:
 
-- Para definir las dimensiones de elementos que forman parte del layout, es decir, que estructuran a la página, se recomienda uasr porcentajes, dado que permiten crear diseños dinámicos que se adapten a las dimensiones del dispositivo.
+- Para definir las dimensiones de elementos que forman parte del layout, es decir, que estructuran a la página, se recomienda usar porcentajes, dado que permiten crear diseños dinámicos que se adapten a las dimensiones del dispositivo.
 - Para la altura de los elementos se pueden usar píxeles (px).
 - Para definir el tamaño de la letra de los textos se pueden usar la unidad “em”.
 
-Importancia de CSS3
+## Importancia de CSS3
 
 - Es la última versión del estándar.
 - Una de sus diferencias es la separación de módulos, donde cada uno cuanta con distintas características. Los módulos más destacados son:
@@ -72,14 +166,20 @@ Importancia de CSS3
     - Animaciones de elementos HTML sin el uso de Flash y JS.
     - Transiciones.
 
-Buenas prácticas de CSS
+## Buenas prácticas de CSS
 
 - Minimizar requerimientos HTTP puede reducir el tiempo de respuesta
 - Los navegadores tienen sus propios estilos, es recomendable tener estilos que se normalicen o reseteen lo estilos de los navegadores.
-- **Normalizadores**: El CSS del diseñador no es el único CSS que se está ejecutando, sino que los navegadores tienen sus propios estilos, y los aplica automáticamente al renderizar
-el sitio.
+
+## Normalizadores
+
+El CSS del diseñador no es el único CSS que se está ejecutando, sino que los navegadores tienen sus propios estilos, y los aplica automáticamente al renderizar el sitio.
+
 Pero no todos los navegadores tienen los mismos estilos CSS entre ellos.
 Esto crea conflictos, dado que una página puede llegar a verse de una forma en un navegador y de otra forma en otro, aunque tengan el mismo CSS y el mismo HTML.
 Los normalizadores regulan las características que pueden verse afectadas por las diferencias entre navegadores. Es recomendable tener estilos que normalicen o reseteen los estilos de los navegadores.
 Un normalizador posible es:
+
 **Normalize** - https://necolas.github.io/normalize.css/
+
+
