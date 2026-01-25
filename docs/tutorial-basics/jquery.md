@@ -79,7 +79,7 @@ Este intercambio de información con el servidor se realiza en segundo plano.
 
 Para eliminar la recarga constante de la página, Ajax crea un elemento intermedio entre el usuario y el servidor. La nueva capa intermedia de AJAX mejora la respuesta de la aplicación, ya que el usuario nunca se encuentra con una ventana del navegador vacía esperando la respuesta del servidor.
 
-![Alt text](./ajax.png)
+![Ajax](./ajax.png)
 
 
 - **Fetch**: es la API moderna para peticiones HTTP.
@@ -88,20 +88,6 @@ Para eliminar la recarga constante de la página, Ajax crea un elemento intermed
 - **Promise (promesa):** es un objeto que representa un valor que aún no se conoce 
 
 cuando se crea, permitiendo manejar de forma más sencilla operaciones asíncronas como la espera de una respuesta de un servidor
-
-Modelo Convencional
-1. Se envía una solicitud HTTP desde el navegador web al servidor.	
-2. El servidor recibe y, posteriormente, recupera los datos.	
-3. El servidor envía los datos solicitados al navegador web.
-4. El navegador web recibe los datos y vuelve a cargar la página para que aparezcan los datos.	
-Durante este proceso, los usuarios deben esperar hasta que se complete el proceso. Consume mucho tiempo, y supone una carga innecesaria en el servidor.
-Modelo basado en Ajax
-1. El navegador crea una llamada de JavaScript que luego activará XMLHttpRequest.
-2. En segundo plano, el navegador web crea una solicitud HTTP al servidor.
-3. El servidor recibe, recupera y envía los datos al navegador web.
-4. El navegador web recibe los datos solicitados
-5. Los datos son mostrados directamente en la página, sin necesidad de recargarla.
-
 
 AJAX está compuesto por las siguientes tecnologías:
 
