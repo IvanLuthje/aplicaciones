@@ -2,7 +2,44 @@
 sidebar_position: 1
 ---
 
-# Manage Docs Versions
+# Introducción a Aplicaciones Nativas
+
+- Desarrolladas en un lenguaje y entorno de desarrollo específico
+- Ejecutadas en un dispositivo y sistema operativo determinado.
+- El código fuente de estas aplicaciones se escribe en función del dispositivo.
+- Este código fuente se compila a un ejecutable. Es un proceso similar al de las tradicionales aplicaciones de escritorio. 
+- Cuando la aplicación está lista para ser distribuida, es subida a las App stores (tiendas de aplicaciones) específicas de cada dispositivo. 
+-	App Stores llevan a cabo un proceso de auditoría para evaluar si se adecúa a los requerimientos y a las políticas del market
+
+## Ventajas
+
+- Aplicación integrada al dispositivo pudiendo interactuar con otras apps del dispositivo
+- Acceso total a las utilidades del dispositivo
+- Capacidad de utilizar toda la pantalla del dispositivo y proporcionar una mejor UI
+- Puede ejecutarse offline
+- La aplicación puede correr en segundo plano y notificar cuando la info esté disponible
+- Aplicaciones más rápidas que un sitio web movil
+- Notificaciones
+
+## Desventajas
+
+- Desarrollo más costoso que un sitio web movil
+- Las apps no están disponibles para ser instaladas en todos los dispositivos móviles
+- La actualización de la app es mucho más compleja
+- Cada plataforma tiene su propio entorno de desarrollo y lenguaje de programación
+- Fragmentación del mercado: Desarrollar para una plataforma puede significar quedar afuera de un alto % del mercado
+- Fragmentación interna. Por ejemplo: Android tiene un gran % del mercado pero actualmente existen varias versiones en uso
+- Para que los usuarios puedan utilizar una aplicación primero debe descargarla e instalarla, lo que requiere un mayor conocimiento y lealtad a la marca
+
+## Plataformas
+
+- Android
+- iOS
+- Windows Phone (obsoleto)
+- Blackberry OS (obsoleto)
+- Symbian (obsoleto)
+
+<!-- # Manage Docs Versions
 
 Docusaurus can manage multiple versions of your docs.
 
@@ -53,3 +90,4 @@ It is possible to edit versioned docs in their respective folder:
 
 - `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
 - `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+ -->
