@@ -95,6 +95,9 @@ Los tipos de medio más comunes son:
 
 **Mobile First Web Design(Top-Bottom)**: Adaptar desde la resolución mas pequeña hasta terminar con la versión para escritorio. Simplificar la lectura de los dispositivos moviles, teniendo los recursos limitados
 
+Si se maqueta un sitio para la versión de escritorio y un usuario se conecta desde un dispositivo, primero cargará todo el contenido para la primera versión, hasta cargar los recursos necesarios para el móvil. 
+
+
 Lo mas recomendable es maquetar en versión mas pequeña optimizando el contenido que se utilice.
 
 ## Buenas prácticas del diseño responsivo
@@ -103,7 +106,7 @@ Antes de ponerlo en práctica, tener en cuenta:
 
 - Evitar efectos y elementos que puedan hacer lenta la carga de la página. Usar librerías que no carguen recursos innecesarios.
 
-- Tener en cuenta los hábitos de navegación de tus usuarios. Recuerda que necesitan soluciones rápidas y concretas, más si se conectan desde su móvil.
+- Tener en cuenta los hábitos de navegación de los usuarios. Recuerda que necesitan soluciones rápidas y concretas, más si se conectan desde su móvil.
 
 - Evitar la sobrecarga de información, usar textos cortos y botones para que el usuario sepa exactamente qué debe hacer en un momento determinado.
 
