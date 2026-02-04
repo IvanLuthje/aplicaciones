@@ -59,10 +59,12 @@ sidebar_position: 2
 	Además, las ventajas ofrecidas en cuanto a la personalización y la flexibilidad de Android pueden provocar que el equipo
 	sea más	vulnerable
 	
-  Ambas tiendas de aplicaciones antes de publicar	una app, realizan un control para detectar posibles malware
+  Ambas tiendas de aplicaciones antes de publicar una app, realizan un control para detectar posibles malware
 
 ## Conclusión 
 
 El mejor sistema operativo se mide de acuerdo al uso requerido por el usuario, de sus gustos personales y su estilo de vida
+
 El sistema iOS es el claro ganador en cuanto a comodidad y usabilidad, tanto para usuarios novatos como experimentados, y el rendimiento del sistema es muy elevado. Pero el mayor problema es el precio
+
 El sistema operativo Android resulta ganador si se analiza el nivel de flexibilidad que le brinda al usuario con respecto a la personalización, y el bajo costo respecto a iOS

@@ -143,6 +143,30 @@ Los aspectos son:
 - Restricciones y permisos necesario de ejecución
 - Interacción con elementos de otras apps.
 
+Es el componente principal del diseño
+
+Define la estructura visual de las actividades
+
+Es el recurso con el que se describe qué se quiere mostrar en pantalla y de qué forma
+
+La forma más común de crearlos es a través de un archivo XML (res/layout)
+
+Se genera una estructura con forma de árbol, donde un nodo raíz contiene sucesivos nodos en los que se colocan otros nodos. Cada nodo representa un objeto “View” o “ViewGroup”
+
+Se separan el diseño de la lógica
+
+XML para la presentación, Java/Kotlin para la lógica de la app. Se deben asociar ambos archivos para que la actividad funcione correctamente.
+
+**La asociación de un Layout con una actividad se hace desde el código, dentro del método onCreate() del archivo Java de la actividad.**
+
+Existen distintos tipos de contenedores: 
+
+- Frame Layout: Es el mas simple, todos los objetos que se introducen, se situarán en la esquina superior izquierda, por lo que si hay más de 1, se solaparán y se ocultarán total o parcial (salvo que se declaren como transparentes). Su uso ideal es mostrar una sola imagen que complete toda la pantalla.
+- Linear Layout: Los elementos se posicionan 1 debajo del otro, dependiendo de si se estructuran vertical u horizontalmente (orientation)
+- Table Layout: Distribución de tabla de los elementos de la interfaz, donde se definen filas y columnas deseadas. Se utiliza la etiqueta tablerow para insertar una nueva fila.
+- Relative Layout: Es la más compleja. Cada elemento se puede colocar en cualquier lugar basado en las posiciones relativas de un elemento respecto de otro: contenedor (padre) o a otros elementos existentes
+- **Absolute Layout:** Permite que los elementos se posicionen en la pantalla de acuerdo a las coordenadas (x,y) Al cambiar de dispositivos con distintos tamaños de pantalla el resultado no va a ser el óptimo. Está obsoleto
+
 **/app/build.gradle: Contiene la información de compilación de proyecto**
 
 **Directorio /app/build: Contiene una serie de elementos de código generados automáticamente al compilar el proyecto.**
@@ -229,6 +253,42 @@ Componente para detectar y responder ante determinados mensajes y eventos global
 - Apps generan mensajes mediante Intents Broadcast.
 
 No tienen interfaz, pero pueden lanzar actividad por medio de un evento.
+
+## Interfaz de Usuario
+
+Principal medio de comunicación entre el usuario y el dispositivo móvil
+
+Mediante la pantalla
+- Se muestran el conjunto de elementos de comunicación
+- Se acceden a las funcionalidades disponibles
+- Se muestran resultados
+
+La UI permite Manejo intuitivo y sencillo y un diseño visual atractivo
+
+Layout
+- LinearLayout
+  - RelativeLayout
+  - FrameLayout
+  - TableLayout
+- Controles
+  - Buttons
+  - TextView
+  - Imágenes
+  - Checkbox
+- Controles de selección
+  - Listas
+  - Listas desplegables
+  - Tablas
+
+Se define a partir de objetos descendientes de clase View
+
+Hay dos tipos de objetos:
+- View con los que interactúa el usuario
+- ViewGroup que son contenedores de objetos de ambos tipos
+
+![Viewgroup](./img/viewgroup.png)
+
+
 
 <!-- # Translate your site
 
