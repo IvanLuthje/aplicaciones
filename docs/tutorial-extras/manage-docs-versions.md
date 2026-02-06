@@ -39,7 +39,15 @@ sidebar_position: 1
 - Blackberry OS (obsoleto)
 - Symbian (obsoleto)
 
+## Fragmentación interna y externa
 
+**Fragmentación Externa** se desarrollan aplicaciones nativas para diferentes plataformas o sistemas operativos, tales como iOS y Android.
+Cuando una marca (ej. Samsung o Xiaomi) tiene tantos modelos que no puede actualizar todos a la misma velocidad.
+
+**Fragmentación Interna** la aplicación se comporta o se presenta en diferentes versiones o en distintos dispositivos dentro de esa misma plataforma.
+La brecha entre los usuarios que tienen Android 14 y los que siguen estancados en Android 10, lo que complica el trabajo a los desarrolladores de apps.
+
+Desarrollar una app para la última versión lanzada de una plataforma es la solución más adecuada, debido a que mejora cuestiones de seguridad y compatibilidad en el futuro.
 
 
 

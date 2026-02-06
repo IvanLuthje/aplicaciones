@@ -127,45 +127,7 @@ Componentes principales del módulo “app”:
 
 /res/values/ – archivos XML de recursos que utiliza la aplicación como las cadenas de texto (strings.xml), arreglos de valores (arrays.xml), estilos (styles.xml) o colores (colors.xml)
 
-## Layouts
 
-**activity_main** Se define la interfaz gráfica de la pantalla principal
-
-Se puede definir por editor gráfico o por editor de texto que representa los elementos de la misma pantalla
-
-**/app/src/main/AndroidManifest.xml: Contiene las definiciones de configuración básicas de la app en formato XML.**
-
-Los aspectos son:
-
-- Identificación de app (nombre, icono)
-- Versión de android
-- Declaración de activities y services
-- Restricciones y permisos necesario de ejecución
-- Interacción con elementos de otras apps.
-
-Es el componente principal del diseño
-
-Define la estructura visual de las actividades
-
-Es el recurso con el que se describe qué se quiere mostrar en pantalla y de qué forma
-
-La forma más común de crearlos es a través de un archivo XML (res/layout)
-
-Se genera una estructura con forma de árbol, donde un nodo raíz contiene sucesivos nodos en los que se colocan otros nodos. Cada nodo representa un objeto “View” o “ViewGroup”
-
-Se separan el diseño de la lógica
-
-XML para la presentación, Java/Kotlin para la lógica de la app. Se deben asociar ambos archivos para que la actividad funcione correctamente.
-
-**La asociación de un Layout con una actividad se hace desde el código, dentro del método onCreate() del archivo Java de la actividad.**
-
-Existen distintos tipos de contenedores: 
-
-- Frame Layout: Es el mas simple, todos los objetos que se introducen, se situarán en la esquina superior izquierda, por lo que si hay más de 1, se solaparán y se ocultarán total o parcial (salvo que se declaren como transparentes). Su uso ideal es mostrar una sola imagen que complete toda la pantalla.
-- Linear Layout: Los elementos se posicionan 1 debajo del otro, dependiendo de si se estructuran vertical u horizontalmente (orientation)
-- Table Layout: Distribución de tabla de los elementos de la interfaz, donde se definen filas y columnas deseadas. Se utiliza la etiqueta tablerow para insertar una nueva fila.
-- Relative Layout: Es la más compleja. Cada elemento se puede colocar en cualquier lugar basado en las posiciones relativas de un elemento respecto de otro: contenedor (padre) o a otros elementos existentes
-- **Absolute Layout:** Permite que los elementos se posicionen en la pantalla de acuerdo a las coordenadas (x,y) Al cambiar de dispositivos con distintos tamaños de pantalla el resultado no va a ser el óptimo. Está obsoleto
 
 **/app/build.gradle: Contiene la información de compilación de proyecto**
 
@@ -288,6 +250,692 @@ Hay dos tipos de objetos:
 
 ![Viewgroup](./img/viewgroup.png)
 
+
+## Layouts
+
+**activity_main** Se define la interfaz gráfica de la pantalla principal
+
+Se puede definir por editor gráfico o por editor de texto que representa los elementos de la misma pantalla
+
+**/app/src/main/AndroidManifest.xml: Contiene las definiciones de configuración básicas de la app en formato XML.**
+
+Los aspectos son:
+
+- Identificación de app (nombre, icono)
+- Versión de android
+- Declaración de activities y services
+- Restricciones y permisos necesario de ejecución
+- Interacción con elementos de otras apps.
+
+Es el componente principal del diseño
+
+Define la estructura visual de las actividades
+
+Es el recurso con el que se describe qué se quiere mostrar en pantalla y de qué forma
+
+La forma más común de crearlos es a través de un archivo XML (res/layout)
+
+Se genera una estructura con forma de árbol, donde un nodo raíz contiene sucesivos nodos en los que se colocan otros nodos. Cada nodo representa un objeto “View” o “ViewGroup”
+
+Se separan el diseño de la lógica
+
+XML para la presentación, Java/Kotlin para la lógica de la app. Se deben asociar ambos archivos para que la actividad funcione correctamente.
+
+**La asociación de un Layout con una actividad se hace desde el código, dentro del método onCreate() del archivo Java de la actividad.**
+
+```java
+public void onCreate(Bundle savedInstance) { 
+	super.onCreate(savedInstance); 	
+	setContentView(R.layout.nombre_del_layout);
+}	
+```
+
+Existen distintos tipos de contenedores: 
+
+- Frame Layout: Es el mas simple, todos los objetos que se introducen, se situarán en la esquina superior izquierda, por lo que si hay más de 1, se solaparán y se ocultarán total o parcial (salvo que se declaren como transparentes). Su uso ideal es mostrar una sola imagen que complete toda la pantalla.
+
+![FL](./img/framelayout.png)
+
+
+- Linear Layout: Los elementos se posicionan 1 debajo del otro, dependiendo de si se estructuran vertical u horizontalmente (orientation)
+
+![FL](./img/linearlayout.png)
+
+```xml
+      <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/action_sign_in_short" />
+
+        </LinearLayout>
+
+```
+
+
+- Table Layout: Distribución de tabla de los elementos de la interfaz, donde se definen filas y columnas deseadas. Se utiliza la etiqueta tablerow para insertar una nueva fila.
+
+![FL](./img/tablelayout.png)
+
+```xml
+<TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" >
+
+        <TableRow
+		android:id="@+id/tableRow1"
+		android:layout_margin="20dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+		android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView2"
+		android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+		android:id="@+id/tableRow2"
+		android:layout_margin="20dp" >
+
+            <TextView
+                android:id="@+id/textView3"
+		android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/editText1"
+		android:inputType="text" />
+        </TableRow>		
+</TableLayout>
+```
+
+
+- Relative Layout: Es la más compleja. Cada elemento se puede colocar en cualquier lugar basado en las posiciones relativas de un elemento respecto de otro: contenedor (padre) o a otros elementos existentes
+
+![FL](./img/relativelayout.png)
+
+
+```xml
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/text1"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text3"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text2"/>
+
+</RelativeLayout>
+```
+
+- **Absolute Layout:** Permite que los elementos se posicionen en la pantalla de acuerdo a las coordenadas (x,y). Al cambiar de dispositivos con distintos tamaños de pantalla el resultado no va a ser el óptimo. Está obsoleto
+
+- Atributos principales de objetos View: Representan las características que definen el aspecto de los elementos 
+
+android:id Es un identificador único para cada elemento
+
+La sintaxis es la siguiente: 
+
+```xml
+android:id="@+id/nombre_identificador"
+```
+Al compilarse genera automáticamente una nueva constante en la clase R con ese identificador
+
+Desde el código accedemos mediante la constante R.id.nombre_identificador
+
+**android:layout_width y android:layout_height: Representan el ancho y el alto de los elementos, se definen con:**
+
+- valores absolutos definidos en dps
+
+- **wrap_content:** ajusta el tamaño al espacio mínimo requerido por el elemento
+
+- **fill_parent:** Ajusta el tamaño a las dimensiones máximas que el contenedor padre le permite
+
+![FL](./img/widthheight.png)
+
+
+**android:layout_gravity:** Los elementos se ubican a partir de posiciones comunes dentro del layout
+
+Puede tomar los siguientes valores:
+
+- Top: parte superior de la pantalla
+
+- Left: sección izquierda
+
+- Right: sección derecha
+
+- Bottom: parte inferior
+
+- Center: centro del layout
+
+- Combinación de las anteriores
+
+Ejemplo
+
+```xml
+android:layout_gravity=right|bottom
+
+```
+![FL](./img/gravity.png)
+
+**android:orientation:** Define el modo en el que se distribuyen los elementos que contiene. Puede ser vertical u horizontal
+
+**android:layout_weight:** Define la importancia que tienen los controles. Se usa con LinearLayout. A mayor importancia más espacio ocupa
+
+![FL](./img/orientation.png)
+
+**android:text:** Texto que aparece en el elemento. Se puede definir dentro del archivo “string.xml” correspondiente a los recursos de la actividad
+**android:textSize:** Tamaño del texto medido en “dps”
+**android:padding** Espacio vacío entre el borde del objeto y su contenido
+**android:background:** Configura el color de fondo del View
+**android:drawable:** Asigna una imagen al elemento
+
+### Diseño del layout
+
+Está formado por distintas secciones
+**Paleta:** se muestran los elementos gráficos
+**Lienzo:** representación en tiempo real de la interfaz
+**Atributos de componentes:** gestionar atributos y parámetros de los elementos
+**Representación de la jerarquía:** Se arma el árbol que representa la relación entre los controles Views que formal el Layout
+
+Modificando el código fuente
+Se definen los distintos elementos insertando las etiquetas y configurando sus atributos manualmente
+Similar a HTML
+
+
+## Recursos XML
+
+**Styles.xml:** Se define el aspecto de los elementos
+Para separar el contenido de la presentación se puede independizar el estilo del diseño a través del archivo de recursos de estilos
+Se logra:
+
+- Reducir, limpiar y simplificar el código fuente
+- Reutilizar código y estilos
+
+![alt text](img/xml.png)
+
+**Se debe crear un nuevo archivo “Styles.xml” en el directorio “res/values/”**
+
+**Strings.xml:** Todos los textos mostrados al usuario se pueden definir en el Layout
+
+Alternativa – Definir todas las cadenas de texto de la aplicación en el archivo “strings.xml” del directorio “/res/values/”
+
+Se logra:
+
+- Definir una cadena de texto (una única vez) para aplicarla en múltiples elementos de la aplicación
+- Facilitar las traducciones a otros idiomas
+
+**/res/drawable:** Es el directorio donde se almacenan los gráficos o imágenes que se muestran en pantalla y que se asignan a los objetos definidos en el Layout. Configuración del atributo “android:drawable” o “android:icon”
+
+![alt text](img/drawable.png)
+
+
+**/res/mipmap:** Directorio donde se almacenan los iconos que se van a mostrar en la app.
+
+## Controles básicos
+
+Botones 
+
+Tres tipos de botones:
+
+- Button: contiene texto 
+- ImageButton: contiene sólo una imagen
+- ToggleButton: son de tipo on/off
+- Switch: igual al anterior pero cambia su aspecto visual
+
+Propiedades:
+
+- id - Identificador
+- text - Texto
+- typeface, textsize y textcolor
+		- Tipo, tamaño y 	color del texto
+- layout_width y height - Dimensiones
+- background - Color de fondo
+- drawable - Imagen
+
+
+
+TextView: Utilizado para mostrar textos al usuario. Las propiedades son:
+
+- Texto
+- Tipo, tamaño y color de la fuente
+- Dimensiones
+- Color de fondo
+
+Imagen
+
+**EditView**: Utilizado para que el usuario introduzca texto
+Propiedades:
+- Mismas que TextView
+- inputText - Tipo de contenido
+  - Dirección de email
+  - Números
+  - Teléfonos
+  - Dirección web
+  - Texto genérico
+- Hint y textColorHint - Texto mostrado al usuario antes del ingreso de datos, y su color
+
+![alt text](img/drawable.png)
+
+
+ImageView: Utilizado para mostrar imágenes en la aplicación
+
+- Se colocan en el directorio /res/drawable/
+
+Propiedades:
+- Dimensiones
+- Dimensiones máximas y mínimas
+- src: ubicación de la imagen como recurso de la appcontent
+- Description: breve descripción textual
+
+## Controles de selección
+
+**Adapter:** Mecanismo por el cual todos los controles de selección acceden a sus datos. Responsable de generar a partir de los datos las vistas que se muestran dentro del control.
+
+Existen tres tipos:
+
+- ArrayAdapter: Provee los datos a partir de un arreglo de objetos
+- SimpleAdapter: Mapea los datos definidos en un archivo xml
+- SimpleCursorAdapter: Mapea columnas de un cursor abierto sobre una base de datos.
+
+![alt text](img/arrayadapter.png)
+
+
+Se pasan tres parámetros:
+- Contexto – actividad donde se crea
+- Id del Layout – define cómo se van a mostrar los datos en el control
+- Arreglo – datos a mostrar
+
+Si los datos del control son estáticos, se puede definir el arreglo de valores en el recurso “/res/values/strings.xml”
+
+![alt text](img/valores_array.png)
+
+
+
+**Spinner:** Muestra una opción seleccionada a partir de una lista desplegable
+
+Propiedades:
+- Id
+- Las mismas que los controles básicos
+
+Métodos:
+
+- getItemAtPosition() – recupera el dato seleccionado
+
+Se debe asociar el adaptador con el spinner
+
+![alt text](img/spinner.png)
+
+
+Si lo asociamos directamente:
+
+- El diseño sólo se aplicaría sobre un solo elemento (el seleccionado) de la lista
+- Para que se aplique a todos, usamos el método setDropDownViewResource()
+
+Eventos:
+
+Formada por dos métodos:
+
+- onItemSelected() – se selecciona una opción de la lista
+- onNothingSelected() – no hay ninguna opción seleccionada
+
+
+**ListView:** Muestra una lista de opciones que son seleccionables
+Propiedades: 
+
+- Las mismas que el Spinner
+
+Métodos:
+
+- getItemAtPosition()
+
+Eventos:
+
+- onItemClick()
+
+![alt text](img/listview.png)
+
+
+Para asociar el adaptador usamos el método setAdapter()
+
+**GridView:** Presenta un conjunto de opciones seleccionables en forma tabular, divididas en filas y columnas
+Propiedades:
+
+- numColumns
+- columnWidth
+- horizontalSpacing
+- verticalSpacing
+- stretchMode: define qué hacer con el espacio sobrante (celdas o espacios)
+
+Tiene los mismos métodos y eventos que ListView
+
+![alt text](img/gridview.png)
+
+
+**RecyclerView:** Con Android 5.0 se incroporó un nuevo control de selección
+- Combina lo mejor de los ListView y GridView
+- Utilizada para mostrar grandes colecciones de datos
+- Para acceder y mostrar los datos necesita utilizar otros componentes adicionales
+- Tiene su propio adaptador
+- El evento onItemClick() no se aplica directamente sobre los elementos, sino que se delega a otro componente
+
+**TabHost** Se utiliza para:
+- Organizar mejor la información 
+- Dividir la pantalla en múltiples pantallas llamadas pestañas
+
+Para su funcionamiento se debe definir el comportamiento mediante código Java
+
+Se debe definir la propiedad id del control obligatoriamente
+
+La sección principales del control son:
+
+**Sección de pestañas:** Control TabWidget
+
+**Sección de contenido:** Control FrameLayout
+
+## Menu de opciones
+
+- Es un componente que permite mostrar un menú de opciones en forma estandarizada
+- La implementación se puede hacer de forma muy similar a la interfaz gráfica de la aplicación
+- Con la aparición del Action Bar han caído en desuso
+
+Existen 3 tipos de menús
+
+- Menú principal – aparecen en la parte inferior de la pantalla cuando el usuario presiona la tecla menú del celular
+- Submenús – son menús secundarios que se muestran al pulsar una opción del menú principal
+- Menú contextual – son los que aparecen al realizar una pulsación larga sobre un elemento de la pantalla
+
+Menú principal
+Hay dos maneras de crearlo:
+
+- Definiendo un archivo .xml externo
+- Desde el código
+
+Submenu
+
+Se muestran en forma de lista emergente, con el título de la opción elegida del menú principal
+Para crearlo usamos el componente `<menu> `dentro del item correspondiente
+
+Para crearlo desde código se usa el método “addSubmenu()” sobre el menu
+
+Menú Contextual
+Está asociado a un control específico de la pantalla
+Se realizan los siguientes pasos:
+1) Asociamos el control en el onCreate() de la actividad
+2) Se define el archivo xml con las distintas opciones del menú 
+3) En la clase java de la actividad, se sobrescribe el método onCreateContextMenu() 
+
+## Notificaciones
+
+Se utilizan para mostrar mensajes al usuario
+Existen dos tipos de mensajes:
+
+**Notificaciones:** Son informativas, no se ejecutan en primer plano y no interactúan inmediatamente con el usuario
+
+**Cuadros de diálogos:** Se ejecutan en primer plano y pueden requerir interacción con el usuario	
+
+
+**Toast Notification:** Es un mensaje que se muestra en pantalla durante unos segundos y desaparece
+
+Se usan para mostrar mensajes rápidos y sencillos **¡NO SE USA PARA MENSAJES IMPORTANTES!**
+
+**Status Bar:** Son aquellas que se muestran cuando recibimos un mensaje de texto, hay alguna actualización disponible del sistema, tenemos el reproductor de música andando
+
+Están formadas por:
+
+- Icono
+- Texto
+- Breve mensaje descriptivo
+- Fecha y hora
+
+Al hacer click se ejecuta la aplicación que la activó
+
+**Cuadros de diálogo:** Son utilizados para:
+
+- Mostrar mensajes informativos
+- Pedir una confirmación rápida
+- Solicitar al usuario una elección simple o múltiple entre distintas alternativas
+
+Hay distintos tipos:
+
+**AlertDialog:** Es usado para mostrar un mensaje sencillo al usuario con un único botón para confirmar su lectura
+
+**Dialogo de confirmación:** Es usado para solicitar al usuario que confirme una determinada acción con dos posibles respuestas: ACEPTAR y CANCELAR
+
+**Dialogo de selección:** Es usado cuando las opciones a seleccionar por el usuario son más de dos, mostrando una lista de opciones
+
+## Fragments
+
+Aplicaciones con interfaz de usuario adaptable a las dimensiones del dispositivo.
+
+**Es una sección o porción modular de una UI que posee su propio funcionamiento**
+
+Se pueden obtener diferentes diseños de pantalla de acuerdo al tamaño y a la orientación del dispositivo
+
+Están embebidas en una actividad. 
+
+Tienen su propio ciclo de vida
+
+Tiene su archivo XML asociado en el directorio /res/layout/ y un .Java para definir su comportamiento
+
+Se asocian a las actividades directamente utilizando el elemento `<fragment>` en el layout o en la implementación de la lógica de la actividad
+
+Se pueden:
+
+- Combinar múltiples Fragments en una actividad
+- Reutilizar en múltiples actividades
+
+Disponible a partir de la versión 3.0 de Android
+
+Ventajas de Fragments
+
+- Apps adaptables a distintas dimensiones de pantalla y orientación
+- Creación de diseños de múltiples vistas
+- Diseños más flexibles y dinámicos
+- Ejemplos, pestañas de navegación, stacking, expand and collapse, etc.
+
+Ciclo de vida: Depende del ciclo de vida de una actividad
+
+- Ejecución: Los fragmentos pueden actuar libremente
+- Pausado: Todos los fragmentos detienen su comportamiento
+- Detenido: Idem anterior
+
+| Metodo | Descripción |
+| --- | --- |
+onAttach() |	Permite asociar el fragmento a la actividad
+onActivityCreated()	| Se ejecuta cuando la actividad termina la ejecución de su método onCreate()
+onCreateView () |	Se llama cuando el fragmento se va a dibujar por primera vez al usuario
+onPause()	| Se ejecuta cuando un fragmento deja de estar en primer plano
+onDestroyView()	| Se destruye la jerarquía de Views del fragmento
+onDetach() |	Se elimina el vínculo entre la actividad y el fragmento
+onBindViewHolder | método en Android que se utiliza en RecyclerView. Adapter para actualizar los datos de una vista existente que se está reutilizando para mostrar un nuevo elemento de la lista.
+
+
+
+Utilización
+
+- Aplicaciones Maestro – Detalle
+- En una pantalla se muestra una lista de ítems, al seleccionar uno de ellos se despliega el detalle de los mismos
+
+- Ejemplo
+	- Aplicación de correo electrónico
+	-	Se muestra un listado con todos los emails recibidos, y al seleccionar uno muestra su contenido
+
+Creación de fragments
+
+Se requieren dos archivos:
+
+- XML – ubicado en /res/layout
+- Java – define la clase que lo representa, debe extender de la clase Fragment
+
+Para asociar el Fragment con la actividad
+
+- Desde el Layout
+
+![alt text](img/fragmentlayout.png)
+
+![alt text](img/fragmentlayout2.png)
+
+Si se agrega el fragment desde el layout de la actividad no se lo puede eliminar ni reemplazar en tiempo de ejecución
+
+
+- Desde el código
+
+![alt text](img/fragmentcode.png)
+![alt text](img/fragmentcode2.png)
+
+Otras operaciones
+
+![alt text](img/fragmentcode2.png)
+
+
+## Eventos
+
+Se gestionan de acuerdo a los siguientes criterios
+Si se declara el Listener en la clase del Fragment, el evento será manejado por el Fragment
+
+Si se utiliza la propiedad onClick() lo manejará la Activity
+
+## Comunicación entre fragment y actividad
+
+La comunicación entre el fragment y la actividad se puede dar en dos sentidos:
+Activity – Fragment
+		La actividad debe identificar al fragmento mediante
+- ID  - findFragmentById()
+- Etiqueta - findFragmentByTag()
+- Fragment – Activity: El fragment debe definir una interface Listener que luego será implementada en la actividad
+
+## Master/Detail
+
+- Concepto de diseño de interfaz donde se muestra una lista de ítems (Maestro) 
+- Al seleccionar un elemento de la lista se despliega el detalle correspondiente
+- El diseño se ajusta automáticamente a la pantalla del dispositivo
+- Es útil para desarrollar aplicaciones para Tablets y Smartphones
+- Está basado en Fragments
+
+## Action Bar
+
+- Representa la barra de títulos y herramientas que aparece en la parte superior de la pantalla
+- Su incorporación comenzó a reemplazar la utilización del menú
+- Normalmente muestra el título de la aplicación o de la actividad en la que se encuentra el usuario, una serie de botones y un menú desplegable
+
+Para poder utilizar esta herramienta, en el archivo “build.gradle” se debe agregar la dependencia
+
+compile 'com.android.support:appcompat-version'
+
+Existen dos tipos:
+
+- Action Bar por defecto: Controlar el tema utilizado por la aplicación
+	
+```xml
+<resources>
+  <style name="Apptheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+</resources>
+
+```
+
+b) Las actividades deben extender de la clase AppCompactActivity
+
+
+```java
+import android.support.v7.app.AppCompatActivity;
+public class MainActivity extends AppCompatActivity{
+
+}
+
+```
+
+- Toolbar: 
+  - “Desactivar” la funcionalidad por defecto del Action bar.. El tema utilizado por la aplicación debe extender de:
+    - Theme.AppCompact.NoActionBar
+    - Theme.AppCompat.Light.NoActionBar
+  - Incluir el Toolbar manualmente como primer elemento del Layout
+  - El menú desplegable lo definimos del mismo modo que en el caso anterior
+  - Asociar el Toolbar con la actividad
+
+Para no definir el Toolbar en todas las actividades, se declara como un layout independiente y se referencia desde el layout de cada actividad con la cláusula “include”
+
+## Geolocalización
+
+- Es un servicio que permite obtener la localización geográfica del dispositivo
+
+- Existen varias formas de obtener la ubicación de un dispositivo:
+  - GPS – exacta
+  - Antenas de telefonía móvil
+  - Puntos de acceso de wifi
+
+- LocationManager
+
+  - Provee acceso al servicio de localización
+  - No se instancia directamente, sino que se recupera la instancia a partir de:
+  - ContextgetSystemService(Context.LOCATION_SERVICE)
+
+-LocationListener
+
+  - Utilizada para recibir notificaciones del LocationManager cuando las coordenadas han cambiado
+  - Se debe asociar al LocationManager a través del método requestLocationUpdates
+
+Pasos para probar la geolocalización
+
+- Verificar que el servicio está activo
+- Suscribirse a las notificaciones de cambio de posición mediante el método requestLocationUpdates() que recibe cuatro parámetros
+- Nombre del proveedor de localización
+- Tiempo mínimo entre actualizaciones (ms)
+- Distancia mínima entre actualizaciones (mts)
+- Instancia de objeto LocationListener
+
+
+El objeto LocationListener tiene cuatro métodos asociados a los eventos recibidos del proveedor 
+
+- onLocationChanged() – se recibe una actualización de posición
+- onProviderDisabled() – el proveedor se deshabilita
+- onProviderEnabled() – el proveedor se activa
+- onStatusChanged() – el estado cambia
 
 
 <!-- # Translate your site

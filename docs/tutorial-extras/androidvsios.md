@@ -27,7 +27,7 @@ sidebar_position: 2
 	- Ambas plataformas tienen un conjunto sólido de apps nativas
 	- Las aplicaciones de terceros más comunes se lanzan para ambos sistemas, pero generalmente iOS los recibe primero, ejemplo: Periscope y Meerkat
 	- Compatibilidad: las aplicaciones de Google 	funcionan sin 	inconvenientes en iOS, mientras que las de Apple no se pueden utilizar con Android
-  - Aplicaciones más innovadoras
+    - Aplicaciones más innovadoras
   
 
 > Android posee y promociona más aplicaciones, y un gran número son gratuitas, mientras que las de iOS la gran mayoría son pagas
