@@ -915,7 +915,7 @@ Para no definir el Toolbar en todas las actividades, se declara como un layout i
   - No se instancia directamente, sino que se recupera la instancia a partir de:
   - ContextgetSystemService(Context.LOCATION_SERVICE)
 
--LocationListener
+- LocationListener
 
   - Utilizada para recibir notificaciones del LocationManager cuando las coordenadas han cambiado
   - Se debe asociar al LocationManager a través del método requestLocationUpdates
@@ -936,6 +936,206 @@ El objeto LocationListener tiene cuatro métodos asociados a los eventos recibid
 - onProviderDisabled() – el proveedor se deshabilita
 - onProviderEnabled() – el proveedor se activa
 - onStatusChanged() – el estado cambia
+
+Permisos
+
+Agregar en el archivo AndroidManifest los permisos:
+    - ACCESS_COARSE_LOCATION
+    - ACCESS_FINE_LOCATION
+
+Simulación
+  Debemos enviar manualmente las coordenadas al emulador de Android para simular el cambio de localización	
+  - Abrir la perspectiva DDMS:
+  - Tools -> Android -> Android Device Monitor 
+            “Emulator Controls”
+
+
+## Tipos de almacenamiento
+
+### SharedPreferences
+
+Es un mecanismo proporcionado por android utilizado para almacenar preferencias de usuarios:
+- Información personal
+- Tamaño de la fuente
+- Colores
+- Idiomas de texto
+- Permite almacenar datos simples de forma clave-valor, donde cada dato representa una preferencia
+- Los datos se guardan en archivos XML
+
+
+Para gestionar las preferencias se utiliza la clase SharedPreferences..
+
+Se pueden crear distintas colecciones de preferencias independientes
+
+El método getSharedPreferences() recibe dos parámetros:
+
+- ID de la colección de preferencias
+- Modo de operación
+
+
+
+Existen distintos modos de operación:
+
+MODE_PRIVATE sólo la aplicación puede acceder al archivo de preferencias
+MODE_WORLD_READABLE otras aplicaciones pueden leer el archivo pero no pueden modificarlo
+MODE_WORLD_WRITABLE otras aplicaciones pueden leer y modificar el archivo
+MODE_MULTI_PROCESS varios procesos pueden acceder al mismo tiempo
+
+
+Las shared preferences se almacenan en data/data/paquete.java/shared_prefs/nombre_coleccion.xml
+
+Formas de almacenar SharedPreferences
+
+- Crear un archivo xml para configurar el Layout de la sección de preferencias
+- El archivo se guarda en el directorio “/res/xml”
+- Se utiliza el elemento principal `<PreferencesScreen>`
+- Para organizar las preferencias en categorías se usa el elemento `<PreferenceCategory>`
+- Dentro de la categoría podemos incluir controles especiales:
+  - CheckboxPreference
+  - EditTextPreference
+  - ListPreference
+  - MultiSelectPreference
+
+### Memoria externa
+
+- Cuando los archivos tienen gran tamaño se recomienda usar la memoria externa
+- La memoria externa suele ser una tarjeta SD
+- Desde la aplicación, antes de usarla es importante verificar que esté disponible
+- El método getExternalStorageStatus() devuelve el estado de la memoria externa:
+  - MEDIA_MOUNTED: podemos escribir y leer en ella
+  - MEDIA_MOUNTED_READ_ONLY: está disponible con permisos sólo de lectura
+
+### SQLite
+
+- Es un sistema de base de datos relacional
+- Es un motor de base de datos que permite
+- Manejar archivos de pequeño tamaño
+- No necesita ejecutarse en un servidor
+- Requiere pocas configuraciones
+- Utiliza SQL para la gestión de los datos
+- Es transaccional
+- Open-Source
+- Android tiene incorporada una api completa para la gestión de la base de datos
+
+- Todos los componentes que forman la BBDD (definiciones, tablas, índices y datos) se guardan en un archivo del dispositivo
+- En cada transacción el archivo se bloquea para que se pueda acceder simultáneamente a la misma BBDD, asegurando EXCLUSION MUTUA
+- Android provee algunas clases para la gestión de SQLITE
+
+- Objeto SQLiteDatabase
+  - Interfaz entre el código de la aplicación y la base de datos SQL
+  - Provee funciones para realizar operaciones INSERT, DELETE, QUERY y RAWQUERY
+
+
+- Objeto CURSOR
+  - Almacena el resultado de una consulta a la base
+  - Permite iterar paso a paso sobre los resultados
+  - Se puede recorrer en forma secuencial o en orden natural
+
+
+Definor una clase que hereda de SQLiteOpenHelper para crear la base de datos  y actualizar la estructura de tablas y datos iniciales
+Implementar los métodos:
+onCreate() – Se ejecuta automáticamente cuando sea necesaria la creación de la BBDD, es decir, cuando no exista
+onUpgrade() – Se ejecuta cuando se necesita una actualización de la estructura de la BBDD o conversión de datos
+
+
+
+
+### Firebase
+
+1. Firebase Realtime Database
+
+Es una base de datos NoSQL en la nube que sincroniza datos en tiempo real.
+Cómo funciona:
+
+Los datos se almacenan como JSON
+Cualquier cambio se sincroniza automáticamente con todos los clientes conectados
+Funciona offline: guarda datos localmente y sincroniza cuando hay conexión
+
+Ejemplo básico:
+
+```json
+// Obtener referencia a la base de datos
+DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+
+// Escribir datos
+database.child("usuarios").child(userId).setValue(usuario);
+
+// Leer datos
+database.child("usuarios").child(userId).addValueEventListener(new ValueEventListener() {
+    @Override
+    public void onDataChange(DataSnapshot dataSnapshot) {
+        Usuario usuario = dataSnapshot.getValue(Usuario.class);
+    }
+});
+```
+
+2. Cloud Firestore
+
+Es la solución más moderna y flexible de Firebase para bases de datos.
+Características principales:
+
+Estructura de documentos y colecciones (más organizada que Realtime Database)
+Consultas más potentes y escalables
+Mejor rendimiento para aplicaciones complejas
+También funciona offline
+
+Ejemplo:
+
+```java
+FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+// Guardar documento
+Map<String, Object> usuario = new HashMap<>();
+usuario.put("nombre", "Juan");
+usuario.put("edad", 25);
+
+db.collection("usuarios").document(userId)
+    .set(usuario)
+    .addOnSuccessListener(aVoid -> Log.d("TAG", "Guardado exitoso"));
+
+// Leer documento
+db.collection("usuarios").document(userId)
+    .get()
+    .addOnSuccessListener(documentSnapshot -> {
+        String nombre = documentSnapshot.getString("nombre");
+    });
+```
+
+3. Firebase Storage
+
+Para almacenar archivos grandes como imágenes, videos, audio, PDFs, etc.
+Cómo funciona:
+
+Usa Google Cloud Storage
+Maneja la subida/descarga automáticamente, incluso con conexiones inestables
+Integración con reglas de seguridad de Firebase
+
+Ejemplo:
+
+```java
+FirebaseStorage storage = FirebaseStorage.getInstance();
+StorageReference storageRef = storage.getReference();
+
+// Subir archivo
+Uri file = Uri.fromFile(new File("ruta/imagen.jpg"));
+StorageReference imageRef = storageRef.child("imagenes/" + file.getLastPathSegment());
+
+imageRef.putFile(file)
+    .addOnSuccessListener(taskSnapshot -> {
+        // Obtener URL de descarga
+        imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+            String downloadUrl = uri.toString();
+        });
+    });
+
+```
+
+¿Cuál usar?
+
+- Firestore: Para datos estructurados de tu app (usuarios, productos, mensajes)
+- Realtime Database: Para datos que necesitan sincronización instantánea (chats, juegos en tiempo real)
+- Storage: Para archivos multimedia y documentos
+
 
 
 <!-- # Translate your site

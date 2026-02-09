@@ -308,7 +308,7 @@ sidebar_position: 4
   Características del DOM:
 
   - Fue una de las herramientas que más influyó en el desarrollo de páginas web dinámicas y aplicaciones web.
-  - Es una interfaz de programación de aplicaciones que provee funciones que se pueden utilizar para manipular las páginas HTML de forma rápida y sencilla, permitiéndole a los programadores crear documentos, navegarlos y agregar, editar o quitar elementos, modificar sus atributos y alterar sus valores.
+  - **Es una interfaz de programación de aplicaciones que provee funciones que se pueden utilizar para manipular las páginas HTML de forma rápida y sencilla, permitiéndole a los programadores crear documentos, navegarlos y agregar, editar o quitar elementos, modificar sus atributos y alterar sus valores.**
   - Es utilizada por el navegador para armar una nueva estructura.
   - El navegador transforma internamente el archivo HTML original en una estructura jerárquica más fácil de manejar formada por una jerarquía de nodos, es decir a partir del código original se genera una nueva estructura donde cada elemento HTML se convierte en un nodo, y cada uno de ellos se interconecta con otros nodos formando un árbol.
 
