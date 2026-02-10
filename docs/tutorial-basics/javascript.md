@@ -5,6 +5,9 @@ sidebar_position: 4
 
   # JavaScript
 
+  JavaScript permite **mostrar la lógica de negocio** y **crear páginas web dinámicas** con mayor interacción con el usuario.
+
+
   ## Introducción a Páginas Web Dinámicas
 
   Una páginas web dinámica es 
@@ -19,7 +22,6 @@ sidebar_position: 4
 
   ## Introducción a Javascript
 
-  JavaScript permite mostrar la lógica de negocio y crear páginas web dinámicas con mayor interacción con el usuario.
 
   Nacido como lenguaje de frontend, la ejecución se realizaba en el navegador del cliente. Es un lenguaje interpretado, no se necesita compilar el código para ejecutarse, se puede probar en el navegador sin la necesidad de instalar otros programas, es un lenguaje de scripting orientado a objetos y no tiene relación con Java.
 

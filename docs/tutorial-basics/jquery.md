@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # jQuery
 
-Libreria (deprecada) que permite simplificar el desarrollo del código JS. 
+Libreria (deprecada) que permite **simplificar el desarrollo del código JS**. 
 
-Se utiliza como complemento. Hoy en día se utilizan frameworks como React, Angular, entre otros que permiten facilitar el desarrollo del codigo JS. Además permite simplificar la forma de interactuar con los documentos HTML:
+Se utiliza como un complemento. Hoy en día se utilizan frameworks como React, Angular, entre otros que permiten facilitar el desarrollo del codigo JS. Además permite simplificar la forma de interactuar con los documentos HTML:
 
 - El acceso a los elementos del DOM.
 - Manipulación del CSS.
@@ -123,6 +123,41 @@ Durante este proceso, los usuarios deben esperar hasta que se complete el proces
 4. El navegador web recibe los datos solicitados
 
 5. Los datos son mostrados directamente en la página, sin necesidad de recargarla.
+
+
+Comunicación Tradicional (Síncrona)
+
+En el modelo tradicional, cada interacción funciona así:
+
+- El usuario hace clic en un enlace o envía un formulario
+- El navegador envía una petición HTTP al servidor
+- La página completa se recarga mientras espera la respuesta
+- El servidor procesa y devuelve una página HTML completa nueva
+- El navegador reemplaza toda la página con el nuevo contenido
+
+Características:
+
+- Bloquea la interfaz durante la espera
+- Recarga completa de la página
+- Mayor consumo de ancho de banda (se transmite todo el HTML, CSS, JS nuevamente)
+- Experiencia menos fluida para el usuario
+
+Comunicación Asíncrona (AJAX)
+
+AJAX (Asynchronous JavaScript and XML) permite:
+
+- Enviar peticiones al servidor en segundo plano
+- No bloquea la interfaz del usuario
+- Recibe solo los datos necesarios (JSON, XML, HTML parcial)
+- Actualiza partes específicas de la página mediante JavaScript
+- El usuario puede seguir interactuando con la página mientras se procesa
+
+Características:
+
+- Experiencia más fluida y rápida
+- Menor consumo de ancho de banda
+- Interfaz más interactiva y similar a aplicaciones de escritorio
+- Mejor rendimiento percibido
 
 **Funcionamiento general**
 
@@ -257,3 +292,4 @@ Para que el cliente pueda procesar los datos más adelante, el servidor los empa
 
 `mostrarObjeto();`
 ```
+

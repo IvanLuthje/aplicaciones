@@ -4,10 +4,10 @@ sidebar_position: 2
 
 # Introducción
 
-La computación movil es un término utilizado para describir el uso de computadoras sin necesidad de estar conectados físicamente a una red.
+La computación movil es un término utilizado para describir el **uso de computadoras sin necesidad de estar conectados físicamente a una red**.
 
 
-Conjunto de equipos portátiles lo suficientemente pequeños y livianos para ser transportados sin perder la capacidad de realizar tareas computacionales
+**Conjunto de equipos portátiles lo suficientemente pequeños y livianos** para ser transportados sin perder la capacidad de realizar tareas computacionales
 
 ## Componentes de la computación movil
 
@@ -20,14 +20,14 @@ La computación movil gira básicamente en torno a 3 componentes tecnológicos q
 
 ## Fases de la computación movil
 
-- **Primera Fase**: Reducción del tamaño de las computadoras (Movilidad)
-- **Segunda Fase**: Reemplazo de los cables de comunicación (Medios Inalámbricos)
-- **Tercera Fase**: Integración de ambas fases (Dispositivos móviles en ambientes inalámbricos)
+- **Primera Fase**: Reducción del tamaño de las computadoras (**Movilidad**)
+- **Segunda Fase**: Reemplazo de los cables de comunicación (**Medios Inalámbricos**)
+- **Tercera Fase**: Integración de ambas fases (**Dispositivos móviles en ambientes inalámbricos**)
 
 ## Características de la computación móvil
 
-- **Movilidad**: Los usuarios pueden llevar su dispositivo movil a cualquier lugar
-- **Amplio alcance**: Describe la accesibilidad de las personas conectándose en cualquier momento y lugar
+- **Movilidad**: Los usuarios pueden llevar su **dispositivo movil a cualquier lugar**
+- **Amplio alcance**: Describe la accesibilidad de las personas **conectándose en cualquier momento y lugar**
 
 ## Atributos de la computación móvil
 
@@ -59,9 +59,9 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
 
 ## 5 eras de tecnología movil
 
-- 1G (Era del ladrillo): Equipos grandes, pesados e incomodos, con enormes baterías con poca duración. La durabilidad era de una hora si estaba activo y 8 en stand-by. Las comunicaciones eran mucho más caras que un teléfono publico. Lo utilizaban empresarios, agentes inmobiliarios entre otros. El modelo más emblemático era el Motorola DynaTac 8000X. Creada por Ericsson en 1981 con el lanzamiento de Nordic Mobile Tecnology de 450 MHZ. Comunicaciones analógicas, la transmisión y recepción de voz se apoyaba sobre un conjunto de ondas de radio que cambiaban de forma continua. Por lo que se utilizaba solamente para hablar. La velocidad de transmisión era muy baja, carente de seguridad y la comunicación era costosa.
-- 2G (Candy Bar): El término Candy Bar describe el largo y la forma fina y rectangular de la mayoría de los dispositivos usados en esta era, debido a su parecido con una barra de chocolate. Se agregan las siguientes mejoras a los dispositivos:
-    - Reducción del tamaño de los celulares.
+- **1G (Era del ladrillo):** Equipos grandes, pesados e incomodos, con enormes baterías con poca duración. La durabilidad era de una hora si estaba activo y 8 en stand-by. Las comunicaciones eran mucho más caras que un teléfono publico. Lo utilizaban empresarios, agentes inmobiliarios entre otros. El modelo más emblemático era el Motorola DynaTac 8000X. Creada por Ericsson en 1981 con el lanzamiento de Nordic Mobile Tecnology de 450 MHZ. Comunicaciones analógicas, la transmisión y recepción de voz se apoyaba sobre un conjunto de ondas de radio que cambiaban de forma continua. Por lo que se utilizaba solamente para hablar. La velocidad de transmisión era muy baja, carente de seguridad y la comunicación era costosa.
+- **2G (Candy Bar)**: El término Candy Bar describe el largo y la forma fina y rectangular de la mayoría de los dispositivos usados en esta era, debido a su parecido con una barra de chocolate. Se agregan las siguientes mejoras a los dispositivos:
+    - **Reducción del tamaño de los celulares**.
     - Mejor definición de las pantallas y calidad de sonido. Primeras pantallas de píxeles LCD.
     - Mejora en las baterías.
     - Envío y recepción de mensajes de texto (SMS).
@@ -83,7 +83,7 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
         - Si bien cumplió durante años con las expectativas planteadas, lo cierto es que luego de un tiempo se convirtió en un sistema obsoleto, ya que sólo permitía acceder a un servicio de voz o datos a baja velocidad de transferencia, tan sólo 9.6 Kbps.
 
 
-- 2.5G (Era de las funciones): En esta era cambia el enfoque sobre la funcionalidad de los dispositivos móviles. Se incorporan nuevas aplicaciones y servicios:
+- **2.5G (Era de las funciones)**: En esta era cambia el enfoque sobre la funcionalidad de los dispositivos móviles. Se incorporan nuevas aplicaciones y servicios:
     - Reproducción de música
     - Tomar fotografías y videos
     - Uso de internet
@@ -100,7 +100,7 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
     No hay un buen aprovechamiento de Internet – Alto costo, pobre marketing y baja performance.
 
 
-- 3G (Era de los smartphones): Se extiende entre el 2002 hasta la actualidad. Esta era ocurrió al mismo tiempo que la tercer y la quinta era. Es una era más teórica y de transición, donde los dispositivos más destacados intentaron ser algo que nunca fueron: 
+- **3G (Era de los smartphones)**: Se extiende entre el 2002 hasta la actualidad. Esta era ocurrió al mismo tiempo que la tercer y la quinta era. Es una era más teórica y de transición, donde los dispositivos más destacados intentaron ser algo que nunca fueron: 
     - No se logró aprovechar todo el potencial de las nuevas tecnologías y accesorios incorporados.
     - Fueron dispositivos con baja performance y aceptación en los usuarios.
 
@@ -125,7 +125,7 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
     - Mejores velocidades de trasmisión de datos, permite desarrollar tasas de transferencia de hasta 7.2 Mbits/s.
     - Añade mejores mecanismos de seguridad a las comunicaciones.
 
-- 4G (Era Touch): Comienza en el 2007 cuando Apple introduce al mercado el iPhone. Cambia el paradigma de cómo se ve y se interactúa con celular.Celulares ofrecen nuevas maneras de interactuar, alcanzar y comprender la información. Se agregan las siguientes mejoras a los dispositivos:
+- **4G (Era Touch)**: Comienza en el 2007 cuando Apple introduce al mercado el iPhone. Cambia el paradigma de cómo se ve y se interactúa con celular.Celulares ofrecen nuevas maneras de interactuar, alcanzar y comprender la información. Se agregan las siguientes mejoras a los dispositivos:
     - Primer producto con pantalla táctil capaz de deslizar, pellizcar, hacer zoom, y arrastrar objetos. 
     - Cambia el modo de interactuar con los dispositivos: Entrada y órdenes por medio de toques en la superficie de la pantalla.
     - Rediseño de la interfaz al usuario: ya no se cuenta con un teclado, por lo que la pantalla debe usarse para proyectar el contenido de las aplicaciones y los controles de hardware virtualizados.
@@ -138,7 +138,7 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
     - Mejores antenas, capacidad, cobertura y calidad de señal.
     - Infraestructura combinada de redes cableadas e inalámbricas.
 
-- 5G: En noviembre de 2014, Huawei anuncia la firma de un acuerdo con la operadora móvil rusa MegaFon para estandarizar y desarrollar redes 5G de prueba, en vistas a la Copa Mundial de Fútbol de 2018. Recién se logró estandarizar en el año 2017 como “Release 15 - Stand Alone”. Más allá de la mejora de la velocidad, el principal objetivo es que la red desate un ecosistema masivo de IoT (Internet of Things), ofreciendo una infraestructura que tenga la capadidad de satisfacer la comunicación de miles de millones de dispositivos conectados, con una buena performance y compensación entre velocidad, latencia y costo. 
+- **5G**: En noviembre de 2014, Huawei anuncia la firma de un acuerdo con la operadora móvil rusa MegaFon para estandarizar y desarrollar redes 5G de prueba, en vistas a la Copa Mundial de Fútbol de 2018. Recién se logró estandarizar en el año 2017 como “Release 15 - Stand Alone”. Más allá de la mejora de la velocidad, el principal objetivo es que la red desate un ecosistema masivo de IoT (Internet of Things), ofreciendo una infraestructura que tenga la capadidad de satisfacer la comunicación de miles de millones de dispositivos conectados, con una buena performance y compensación entre velocidad, latencia y costo. 
 
     La red cuenta con las siguientes características:
     - Tasas de datos de hasta 10 Gbps. De 10 a 100 veces más rápida que la 4G.
@@ -151,7 +151,7 @@ En esta década se lanza al mercado un dispositivo similar al Handie Talkie pero
 
 ## Características de los dispositivos
 
-- Movilidad (Tamaño Reducido): Cualidad de un dispositivo para ser transladado o movido facilmente con frecuencia. Va de la mano con su tamaño, dado una cualdad de los dispositivos que son lo suficientemente pequeños para ser utilizados facilmente con 1 o 2 manos, sin necesidad de contar con soporte externo, mientras son transportados.
+- Movilidad (**Tamaño Reducido**): Cualidad de un dispositivo para ser transladado o movido facilmente con frecuencia. Va de la mano con su tamaño, dado una cualdad de los dispositivos que son lo suficientemente pequeños para ser utilizados facilmente con 1 o 2 manos, sin necesidad de contar con soporte externo, mientras son transportados.
 - Capacidad de interacción inalámbrica: Capacidad de enviar y recibir datos por señales de RF, permitiendo la comunicación y/o acceso a red sin cables
 - Capacidad de interacción con personas: Proceso de uso que establece el usuario con el dispositivo. En el diseño del mismo, intervienen disciplinas como usabilidad y ergonomía.
 
@@ -374,6 +374,7 @@ La gran ventaja que presenta es que no es necesario conocer ningún lenguaje de 
     Incorpora herramientas que ofrecen distintas funciones como: compilación flexible, entorno unificado para todos los dispositivos Android, integración con GitHub, identificador de problemas (rendimiento, usabilidad y compatibilidad) entre otras. 
     Admite lenguajes de programación como Java y Kotlin.
     Android Studio está disponible para plataformas de escritorio como Mac, Windows y Linux.
+    
 - **Hibrido**: Existe un entorno de desarrollo preferente que es Apache Cordova. La mayoría de los entornos de desarrollo en HTML5 ofrecen opciones de integración con Cordova, a la vez que la cantidad de plugins disponible es muy elevado.
 
     - **Apache Cordova**: Apache Cordova es la versión de código abierto del conocido PhoneGap. 

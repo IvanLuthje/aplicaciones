@@ -12,7 +12,7 @@ Se desarrolla con lenguajes de programación de las web apps como HTML, CSS y Ja
 
 Brinda la posibilidad de acceder a las capacidades del dispositivo.
 
-La podemos ver como una aplicación web móvil que se comporta como una aplicación nativa.
+Aplicación web móvil que se comporta como una aplicación nativa.
 
 Una vez que la aplicación está terminada, se compila generando un ejecutable.
 
@@ -27,7 +27,7 @@ La ejecución se realiza a través de una vista WebView, utilizada para visualiz
 - Distribución mediante distintas plataformas.
 - La aparición de nuevos Frameworks y librerías facilita cada vez más el desarrollo
 
-## Desventajas
+## Desventajas
 
 - Performance es mayor que una web app pero menor que una aplicación nativa.
 - Diseño visual puede estar afectado por el sistema operativo sobre el cual se ejecuta.
