@@ -288,6 +288,10 @@ sidebar_position: 4
 
   Si se accede a la propiedad “obtieneId” sin paréntesis, retorna la definición de la función y no se ejecuta
 
+  **this:** Un concepto importante es la utilización de la palabra this dentro de los métodos del objeto. Hace referencia al objeto que está llamando al método, independientemente del nombre del objeto. Se pueden manipular sus propiedades y métodos.
+
+
+
   ## Ventanas (en desuso)
 
   Para mostrar información útil al usuario disponemos de los elementos:
@@ -298,8 +302,7 @@ sidebar_position: 4
 
   ## Document Object Model (DOM)
 
-  Es una **API** que representa la **estructura de un documento HTML o XML** como un **árbol de nodos**.  El árbol generado no solo representa cada uno de los elementos que forman el archivo original (nodos del árbol), sino también las relaciones entre ellos (los conectores). Permite manipular y cambiar los elementos. El navegador encuentra el elemento y puede cambiar el comportamiento y asociar eventos en tiempo de ejecución.
-
+  Es una **API** que representa la **estructura de un documento HTML o XML** como un **árbol de nodos**.  El árbol generado no solo representa cada uno de los elementos que forman el **archivo original (nodos del árbol)**, sino también las relaciones entre ellos (los conectores). **Permite manipular y cambiar los elementos. El navegador encuentra el elemento y puede cambiar el comportamiento y asociar eventos en tiempo de ejecución.**
   El origen de la api DOM surgió por la necesidad de procesar fácilmente archivos XML, pero se puede utilizar independientemente al lenguaje de programación.
 
   Se distinguen dos tipos de nodos:
@@ -309,19 +312,22 @@ sidebar_position: 4
 
   Características del DOM:
 
-  - Fue una de las herramientas que más influyó en el desarrollo de páginas web dinámicas y aplicaciones web.
+  - Fue una de las herramientas que más **influyó en el desarrollo de páginas web dinámicas y aplicaciones web**.
   - **Es una interfaz de programación de aplicaciones que provee funciones que se pueden utilizar para manipular las páginas HTML de forma rápida y sencilla, permitiéndole a los programadores crear documentos, navegarlos y agregar, editar o quitar elementos, modificar sus atributos y alterar sus valores.**
-  - Es utilizada por el navegador para armar una nueva estructura.
-  - El navegador transforma internamente el archivo HTML original en una estructura jerárquica más fácil de manejar formada por una jerarquía de nodos, es decir a partir del código original se genera una nueva estructura donde cada elemento HTML se convierte en un nodo, y cada uno de ellos se interconecta con otros nodos formando un árbol.
+  - Es utilizada por el n**avegador para armar una nueva estructura**.
+  - El navegador **transforma internamente el archivo HTML original en una estructura jerárquica más fácil de manejar formada por una jerarquía de nodos**, es decir a partir del código original se genera una nueva estructura donde **cada elemento HTML se convierte en un nodo, y cada uno de ellos se interconecta con otros nodos formando un árbol.**
 
   La transformación automática de la página web en un árbol de nodos se realiza siguiendo las reglas:
 
   - Cada etiqueta HTML se transforma en dos nodos:
-      - La propia etiqueta.
-      - El contenido dentro del la etiqueta se convierte en un nodo hijo.
-  - Si una etiqueta HTML se encuentra dentro de otra, siguiendo la primer regla, el primer nodo generado será hijo de la etiqueta padre.
-  - Si una etiqueta HTML tiene contenido textual, el nodo que representa ese contenido será una hoja del árbol general.
 
+      **- La propia etiqueta.**
+
+      **- El contenido dentro del la etiqueta se convierte en un nodo hijo.**
+
+  - Si una etiqueta HTML **se encuentra dentro de otra, siguiendo la primer regla, el primer nodo generado será hijo de la etiqueta padre**.
+  - Si una etiqueta HTML **tiene contenido textual, el nodo que representa ese contenido será una hoja del árbol general.**
+  
   Para utilizar la API del DOM, es necesario que se construya el arbol de nodos para ejecutar las funciones y **LA PAGINA DEBE CARGARSE COMPLETAMENTE.**
 
   ![Alt text](./dom.png)
@@ -390,7 +396,23 @@ sidebar_position: 4
 
   Se pueden encontrar los siguientes tipos de eventos:
 
-
+| Eventos | Descripción | Elementos para los que está definido |
+|---|---|---|
+| onload | La página se carga automáticamente | `<body>` |
+| onmousedown | Pulsar (sin soltar) un boton del mouse | Todos los elementos |
+| onmousemove| Mover el mouse | Todos los elementos |
+| onmouseover | Mouse entra en el elemento | Todos los elementos  |
+| onmouseup | Soltar botón del mouse | Todos los elementos  |
+| onreset | Inicializar formulario (borrando todos sus datos) | `<form>` |
+| onresize | Se ha modificado tamaño de ventana del navegador | `<body> `|
+| onblur | Deseleccionar elemento | `<button>` `<input>` `<label>` `<select>` `<textarea>` `<body>`  |
+| onchange | Deseleccionar elemento que se ha modificado | `<input>` `<select>` `<textarea>`  |
+| onclick | Pinchar y soltar el mouse | Todos los elementos |
+| ondblclick | Mouse entra en el elemento | Todos los elementos  |
+| onfocus | Seleccionar elemento |`<button>` `<input>` `<label>` `<select>` `<textarea>` `<body>`   |
+| onkeydown | Pulsar una tecla (sin soltar) | Elementos de formulario y `<body>` |
+| onkeypress | Pulsar una tecla | Elementos de formulario y `<body>` |
+| onkeyup | Soltar tecla pulsasda | Elementos de formulario y `<body>` |
 
   Existen distintas formas de definir los manejadores de eventos:
 
@@ -415,6 +437,13 @@ sidebar_position: 4
   **Window:** Representa la ventana completa del navegador. Permite redimensionar, mover y manipular la ventana actual del navegador.
 
   **Document:** Es el único elemento que pertenece tanto al BOM como al DOM, y proporciona información sobre la propia página. Las propiedades más importantes son:
+  
+| Propiedad | Descripción |
+|---|---|
+| lastmodified | fecha de última modificación de la página |
+| referrer | URL desde la que accedió a la página |
+| title | Texto de etiqueta `<title>` |
+| URL | La URL de la página actual del navegador |
 
 
   - **Navigator:** Permite obtener información útil del propio navegador
@@ -426,9 +455,9 @@ sidebar_position: 4
   ![Alt text](./bom.png)
 
 
-  Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+  <!--Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
 
-  ## Create your first Post
+   ## Create your first Post
 
   Create a file at `blog/2021-02-28-greetings.md`:
 
@@ -453,4 +482,4 @@ sidebar_position: 4
   Feel free to play around and edit this post as much as you like.
   ```
 
-  A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+  A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings). -->

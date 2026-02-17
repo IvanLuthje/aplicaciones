@@ -10,7 +10,7 @@ NativeScript es un framework de código abierto para crear aplicaciones móviles
 
 ### 2. Cómo funciona, núcleo y características principales
 
-![image.png](attachment:b3654a27-d1e1-437d-a1cf-d18fc7bc9c88:image.png)
+![image.png](./img/image.png)
 
 NativeScript está basado en tiempo de ejecución (runtime). Este runtime permite que el código JavaScript se comunique directamente con las APIs nativas de iOS y Android.
 
@@ -83,6 +83,7 @@ Aunque no es tan popular como React Native o Flutter, NativeScript tiene una com
 
 ### 11. Análisis del esquema jerárquico completo de un proyecto
 
+![image.png](./img/esquemans.png)
 
 **App:** Permite mostrar todo el código fuente de la aplicación.
 

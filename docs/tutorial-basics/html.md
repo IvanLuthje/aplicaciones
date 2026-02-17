@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # HTML
 
- Lenguaje en el cual se escriben las páginas web, que es interpretado por navegadores para dibujar y mostrar el contenido de la página web a los usuarios. 
+ Lenguaje en el cual se escriben las páginas web, que es interpretado por navegadores para **dibujar y mostrar el contenido de la página web a los usuarios.**
  
  Es un lenguaje de etiquetas, ya que todos los elementos que definen los componentes que forman parte de la página web se definen a partir de etiquetas.
 
@@ -12,7 +12,7 @@ Se crea el estandar CSS para separar el diseño del contenido.
 
 ## Etiquetas
 
-Se definen estas etiquetas para definir los distintos elementos y secciones que componen un documento HTML como párrafos, enlaces, imágenes, listas, tablas, encabezados, cuerpo y pie de página, etc.
+Se definen estas etiquetas para **definir los distintos elementos y secciones que componen un documento HTML** como párrafos, enlaces, imágenes, listas, tablas, encabezados, cuerpo y pie de página, etc.
 
 Las etiquetas se indican por pares y se indican de la siguiente forma:
 
@@ -26,7 +26,13 @@ Las etiquetas se indican por pares y se indican de la siguiente forma:
 
 ## Atributos
 
+
+Los elementos pueden presentar o no atributos, pero algunos que deben tener atributos obligatorios.
+No todos los atributos se pueden utilizar en todos los elementos, sino que cada elemento tiene su propia lista de atributos posibles.
+La mayoría de los atributos son pares nombre-valor, separados por el signo “=”.
+
 Hay cuatro tipos de atributos:
+
 
 - **Básicos**: Se pueden utilizar con todas las etiquetas: id, class, style, title
 - **Internalización**: Se usan para mostrar el contenido en distintos idiomas: lang
@@ -121,9 +127,9 @@ Existen dos tipos de elementos, su diferencia radica en la forma que ocupan el e
 - **Elementos de bloque:** Comienzan en una nueva línea y ocupan todo el ancho disponible ```<div> - <p> - <form>```
 - **Elementos en línea:** No necesariamente comienzan en una nueva línea y sólo ocupan el ancho que necesitan ```<span> - <a> - <img>```
 
-**div**: Elemento de bloque para definir zonas o divisiones de una página web, utilizado también como un elemento contenedor de otros elementos HTML. No tiene atributos obligatorios.
+**div**: **Elemento de bloque** para **definir zonas o divisiones de una página web**, utilizado también como un **elemento contenedor de otros elementos HTML**. No tiene atributos obligatorios.
 
-**span**: Elemento en línea, funciona como un contenedor de textos. No tiene atributos obligatorios.
+**span**: **Elemento en línea**, funciona como un **contenedor de textos**. No tiene atributos obligatorios.
 
 
 
@@ -131,12 +137,11 @@ Existen dos tipos de elementos, su diferencia radica en la forma que ocupan el e
 
 Pueden ser configurados en todos los elementos HTML mencionados, los más importantes son:
 
-**Id:** Permite identificar a un elemento específico del documento, por lo que deben ser únicos.
+**Id:** Permite identificar a un **elemento específico del documento**, por lo que deben ser únicos.
 
-**Class:** Se utilizan para agrupar elementos con características y propiedades comunes.
+**Class:** Se utilizan para agrupar elementos con **características y propiedades comune**s.
 
-**Style:** Agregar propiedades CSS a un elemento. Se utiliza en la etapa de diseño para realizar pruebas. No es recomendable pasarlo a producción, para ello se define un archivo CSS.
-
+**Style:** Agregar **propiedades CSS a un elemento**. Se utiliza en la etapa de diseño para realizar pruebas. **NO es recomendable pasarlo a producción, para ello se define un archivo CSS.**
 ## Layout
 
 
@@ -150,41 +155,51 @@ Representa estructura básica del sitio, define la disposición general de los e
 
 ## Tags semánticos
 
-Se utilizan para reemplazar los contenedores div y span para separar los contenidos del sitio. Son elementos con un significado propio que describen claramente su contenido. Un tag semántico no fue diseñado para estructurar el layout sino para ayudar al programador a identificar las distintas secciones del documento HTML.
+Se utilizan para **reemplazar los contenedores div y span para separar los contenidos del sitio**. Son elementos con un significado propio que describen claramente su contenido. **Un tag semántico no fue diseñado para estructurar el layout sino para ayudar al programador a identificar las distintas secciones del documento HTML**.
 
 ### Header
 
-Encabezados, pueden haber varios en un mismo documento, en el cual contiene elementos de identidad, logos y nombre de la organización y eslóganes y elementos de navegación el sitio.
+**Encabezados**, pueden haber varios en un mismo documento, en el cual contiene **elementos de identidad, logos y nombre de la organización y eslóganes y elementos de navegación el sitio.**
 
 ### Nav
 
-Define el menú principal de navegación del sitio, por lo tanto, define un conjunto de links para navegar hacia otras secciones o páginas del sitio. Se utiliza para bloques de navegación dentro de un documento.
+Define el **menú principal de navegación del sitio**, por lo tanto, define un **conjunto de links para navegar hacia otras secciones o páginas del sitio**. Se utiliza para bloques de navegación dentro de un documento.
 
 ### Main 
 
-Contenido principal de la página y es el contenedor del elemento section, es único y agrupa justo el contenido deseado y no se permite agrupar elementos como anuncios y barras laterales.
+**Contenido principal de la página y es el contenedor del elemento section**, es único y agrupa justo el contenido deseado y **no se permite agrupar elementos como anuncios y barras laterales.**
 
 ### Section 
 
-Permite agrupar contenido relacionado, representa una sección del documento con elementos del mismo tema.
+Permite **agrupar contenido relacionado**, representa una s**ección del documento con elementos del mismo tema**.
 
 ### Article 
 
-Similar a la sección que por sí solo tiene razón de ser y significado. Por ejemplo: post de "blogs", artículos de una revista digital, noticias de un periódico digital y opiniones de un foro.
+Similar a la sección que por sí **solo tiene razón de ser y significado**. Por ejemplo: post de "blogs", artículos de una revista digital, noticias de un periódico digital y opiniones de un foro.
 
 ### Aside
 
-Contenido menos importante del sitio, se define como barra lateral de una página web. Utilizado para calendarios, publicidad, notas, redes sociales relacionadas, info de contacto, etc.
+Contenido **menos importante del sitio**, se define como **barra lateral de una página web**. Utilizado para **calendarios, publicidad, notas, redes sociales relacionadas, info de contacto, etc.**
 
 ### Footer
 
-Pie de página, en la cual se define información como contacto, derechos de autor y avisos legales. Al igual que el header pueden haber varios en el mismo documento.
+Pie de página, en la cual se define información como **contacto, derechos de autor y avisos legales**. Al igual que el header pueden haber varios en el mismo documento.
+
+¡¡Estos elementos han sido creados para aumentar la semántica de la estructuración de los documentos, 
+y no para dar sentido al layout!!
+
+
+
 
 ## Formularios
 
 **Form:** Etiqueta que define un formulario, son usados para recolectar datos que ingresa el usuario para que posteriormente sean procesados, permiten enviar requerimientos con estos datos al servidor. 
 
 **Input:** Define los distintos tipos de datos que puede ingresar el usuario, es el más importante y utilizado, se debe indicar el tipo de dato que se espera recibir en el campo mediante el atributo **type**
+
+Tipos de datos
+
+
 
 **Action:** Posee la URL que indica a dónde se van a enviar los datos del formulario
 
@@ -286,5 +301,8 @@ Pie de página, en la cual se define información como contacto, derechos de aut
     - El valor de los atributos se encierra siempre entre comillas.
     - Todas las etiquetas deben cerrarse siempre, incluso las etiquetas no tienen cierre.
 
+Un concepto fundamental de XHTML es lograr páginas semánticas
+Documentos donde se especifican qué elementos forman el contenido y no cómo tiene que verse cada cosa.
+Por esta razón, se eliminan todas las etiquetas y atributos que sirven para definir el aspecto.
 
 

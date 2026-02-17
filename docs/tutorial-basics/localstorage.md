@@ -4,35 +4,35 @@ sidebar_position: 6
 
 # LocalStorage
 
-En las aplicaciones web, las peticiones entre un navegador y el servidor se realizan bajo el protocolo HTTP. Este protocolo es stateless, o sin estado, es decir que los servidores no persisten ninguna información sobre la petición realizada por el cliente, sólo se limitan a devolver el recurso solicitado. Para el servidor, una petición es indistinta de otra inmediata.
+En las aplicaciones web, las peticiones entre un navegador y el servidor se realizan bajo el protocolo HTTP. Este protocolo es stateless, o sin estado, es decir que **los servidores no persisten ninguna información sobre la petición realizada por el cliente**, **sólo se limitan a devolver el recurso solicitado**. Para el servidor, **una petición es indistinta de otra inmediata.**
 
-Para solucionar esta limitación surge el concepto del manejo de COOKIES
+Para solucionar esta limitación surge el concepto del manejo de **COOKIES**
 
 ## Cookies
 Las cookies son pequeños pedacitos de información que viajan en cada petición entre el cliente y el servidor.
 El funcionamiento a grandes rasgos es el siguiente: 
-- El servidor para identificar un usuario le asigna un ID único a cada cliente. 
-- El cliente le enviará dicho identificador en cada una de las próximas peticiones al servidor.
-- Posteriormente, cuando el servidor la recibe, comprueba que el ID sea válido (es decir, matchea en una base de datos local a qué usuario le asignó ese identificador) y lo reconoce. De esta forma se puede establecer finalmente una sesión entre el cliente y servidor.
 
-Vale aclarar que queda a cargo del desarrollador de backend implementar la asignación y validación de cada ID generado y recibido de cada cliente.
-
+- **El servidor para identificar un usuario le asigna un ID único a cada cliente.** 
+- **El cliente le enviará dicho identificador en cada una de las próximas peticiones al servidor.**
+- Posteriormente, cuando el servidor la recibe, **comprueba que el ID sea válido (es decir, matchea en una base de datos local a qué usuario le asignó ese identificador) y lo reconoce.** De esta forma **se puede establecer finalmente una sesión entre el cliente y servidor.**
+> Vale aclarar que queda a cargo del desarrollador de backend implementar la asignación y validación de cada ID generado y recibido de cada cliente.
+> 
 Características de las cookies:
 
-- Acceso a la información desde el servidor.
-- Tienen caducidad, es decir expiran y se borran después de un determinado tiempo.
-- Espacio limitado: Una cookie sólo puede ocupar 4kb de espacio. 
-- Cada vez que se realiza una petición al servidor, toda la información guardada en las cookies (hasta 4Kb) deben viajar al servidor y volver. En el intercambio de información siempre viajan las cookies.
-- Cada dominio almacena todas sus cookies en una sola cadena, lo que puede dificultar el análisis de los datos.
-- Los datos no están encriptados.
-- La inyección de SQL se puede realizar desde una cookie.
+- **Acceso a la información desde el servidor.**
+- **Tienen caducidad,es decir expiran y se borran después de un determinado tiempo.** 
+- **Espacio limitado: Una cookie sólo puede ocupar 4kb de espacio.**
+- **Cada vez que se realiza una petición al servidor, toda la información guardada en las cookies (hasta 4Kb) deben viajar al servidor y volver. En el intercambio de información siempre viajan las cookies.**
+- **Cada dominio almacena todas sus cookies en una sola cadena, lo que puede dificultar el análisis de los datos.**
+- **Los datos no están encriptados.**
+- **La inyección de SQL se puede realizar desde una cookie.**
 
 ## Cookies Vs Storage
 Las cookies resultaron la herramienta más útil durante mucho tiempo. Por la evolución de los navegadores y el avance hacia HTML5, se está dejando a un lado el concepto de utilizar Cookies, y se está migrando a LocalStorage y SessionStorage.
 
-Ambas herramientas tienen similitudes, ya que consisten en almacenar información en el equipo del usuario que accede a la página web. Pero la diferencia es que las sólo los datos almacenados en las Cookies son y enviados y compartidos con el servidor.
+Ambas herramientas tienen similitudes, ya que consisten en almacenar información en el equipo del usuario que accede a la página web. Pero la diferencia es que las **sólo los datos almacenados en las Cookies son y enviados y compartidos con el servidor.**
 
-Por lo tanto, la gran ventaja de las cookies es que podemos almacenar información accesible desde el servidor. Pero hay muchos otros casos en que sólo queremos persistir la información en el lado del cliente.
+Por lo tanto, **la gran ventaja de las cookies es que podemos almacenar información accesible desde el servidor.** Pero hay muchos otros casos en que sólo queremos persistir la información en el lado del cliente.
 
 
 
@@ -56,7 +56,7 @@ El objeto Storage es una API de almacenamiento web, que nos permite almacenar da
 
 ### LocalStorage Vs SessionStorage
 
-HTML5 introduce las propiedades LocalStorage y SessionStorage, que tienen la capacidad de acceder al objeto Storage para almacenar datos de forma local. La diferencia entre ellas es que localStorage almacena los datos en forma indefinida o hasta que son eliminados explícitamente del navegador, mientras que sessionStorage almacena información mientras la ventana donde se esté utilizando siga abierta; una vez cerrada, la información se elimina.
+HTML5 introduce las propiedades LocalStorage y SessionStorage, que tienen la capacidad de acceder al objeto Storage para **almacenar datos de forma local.** La diferencia entre ellas es que l**ocalStorage almacena los datos en forma indefinida** o hasta que son eliminados explícitamente del navegador, mientras que **sessionStorage almacena información mientras la ventana donde se esté utilizando siga abierta; una vez cerrada, la información se elimina**.
 
 Esta última es una solución ideal para los casos en los que solo necesitamos la información temporalmente (formularios encadenados o anidados, en distintas páginas de un asistente que recoge datos, etc.).
 

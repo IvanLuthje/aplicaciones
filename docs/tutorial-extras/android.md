@@ -193,7 +193,9 @@ Medio de comunicación entre los distintos componentes de android, se utiliza co
 
 `putExtra` es un método de la clase `Intent` en Android que se usa para adjuntar datos a una intención y enviarlos a otra actividad u otro componente de la aplicación. Funciona como un par clave-valor, donde la "clave" es una cadena (String) que identifica el dato y el "valor" es el dato que se quiere enviar, como texto, números o booleano. Para recuperarlos, el componente receptor usa el método `getExtra()` con la misma clave. 
 
-Views: Componentes de UI, existen distintos tipos de vistas y jerarquías de vistas incluidas en otros grupos
+## Views
+
+Componentes de UI, existen distintos tipos de vistas y jerarquías de vistas incluidas en otros grupos
 
 Se definen dentro del layout de cada actividad.
 
@@ -575,7 +577,7 @@ Propiedades:
 
 ## Controles de selección
 
-**Adapter:** Mecanismo por el cual todos los controles de selección acceden a sus datos. Responsable de generar a partir de los datos las vistas que se muestran dentro del control.
+**Adapter:** Mecanismo por el cual **todos los controles de selección acceden a sus datos**. Responsable de generar a partir de los datos las vistas que se muestran dentro del control.
 
 Existen tres tipos:
 
@@ -616,6 +618,8 @@ Si lo asociamos directamente:
 
 - El diseño sólo se aplicaría sobre un solo elemento (el seleccionado) de la lista
 - Para que se aplique a todos, usamos el método setDropDownViewResource()
+
+![alt text](img/spinner2.png)
 
 Eventos:
 
@@ -663,6 +667,9 @@ Tiene los mismos métodos y eventos que ListView
 - Para acceder y mostrar los datos necesita utilizar otros componentes adicionales
 - Tiene su propio adaptador
 - El evento onItemClick() no se aplica directamente sobre los elementos, sino que se delega a otro componente
+
+![alt text](img/recyclerview.png)
+
 
 **TabHost** Se utiliza para:
 - Organizar mejor la información 

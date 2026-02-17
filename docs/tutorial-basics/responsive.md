@@ -71,12 +71,18 @@ Consiste en dividir la estructura de la pagina web, sobre la cual se posicionar�
 Este sistema frecuentemente cuenta con 12 columnas, que juntas tienen un ancho del 100% de la página (o contenedor), y se encogerá o expandirá de acuerdo a las dimensiones de la ventana del navegador. El motivo de usar exactamente 12 columnas y no 10, por ejemplo, es la versatilidad que ofrece el número 12, porque tiene muchos factores (es divisible entre 1, 2, 3, 4, 6 y 12).
 La utilización de esta herramienta facilita la ubicación de los elementos sobre la página, dado que a cada elemento se le indica cuántas “columnas” ocupará dentro de su contenedor.
 
+  ![Alt text](./gridview.png)
+  ![Alt text](./gridview2.png)
+
 ## Media Queries
 
 Es la herramienta más importante para lograr aplicar distintos diseños en diferentes dispositivos.
 Fue incorporada en la última versión de CSS (CSS3).
 Este módulo sirve para detectar no solo el tipo de dispositivo por el que se está navegando, sino que permite aplicar diferentes estilos en base a las propiedades del dispositivo, como el ancho y alto de la ventana del navegador, el ancho y alto del dispositivo, el tipo de pantalla, la resolución del dispositivo y la orientación de la pantalla.
 Antes de CSS3, debíamos utilizar JavaScript para obtener información sobre las dimensiones del navegador, y a partir de esa información ajustar las propiedades de los elementos del DOM. La llegada de media queries simplifica mucho esta tarea.
+
+  ![Alt text](./mediaqueries.png)
+
 
 ## Media Types
 
@@ -129,14 +135,10 @@ Los ejes principales del diseño responsivo son:
 Los navegadores tienen incorporada herramientas para realizar depuraciones que permiten:
 
 - Manipular el DOM.
-- Editar y depurar JavaScript, css.
+- Editar y depurar JavaScript y css.
 - Realizar auditorías del sitio para verificar el nivel de optimización alcanzada, evaluando la performance, analizando recursos consumidos.
 - Permite emular pantallas de celular, diferentes tamaños de pantalla y resoluciones del dispositivo.
 - Permite simular valores de distintos sensores (eventos táctiles, orientación del dispositivo, acelerómetro) y coordenadas de geolocalización.
-
-
-
-
 
 
 Si en el escritorio cuenta con tres columnas para distribuir los contenidos, en los dispositivos móviles sólo cuenta con una columna.

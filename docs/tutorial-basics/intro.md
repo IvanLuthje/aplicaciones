@@ -2,8 +2,6 @@
 sidebar_position: 1
 ---
 # Introducción a aplicaciones Web
-
-## Aplicación Web 
  
 Son aplicaciones desarrolladas utilizando HTML, CSS y JS. 
  
@@ -41,9 +39,9 @@ No se distribuyen por medio de tiendas de aplicaciones, se comercializan y promo
 
 **W3C:** Consorcio creado para fomentar el crecimiento de la web, mediante desarrollo de protocolos y estándares. Permite lograr la accesibilidad, internalización e independencia de los dispositivos.
 
-**Cliente-Servidor:** Modelo que describe interacción entre una computadora local **(cliente)** con una computadora remota **(servidor)** que almacena y hace disponible diferentes recursos. Es un sistema en el cual existen clientes que realizan peticiones a un servidor, el cual procesa dicho requerimiento y retorna los resultados al cliente apropiado. Se dan a través de una RED.
+**Cliente-Servidor:** Modelo que describe interacción entre una computadora local **(cliente)** con una computadora remota **(servidor)** que almacena y hace disponible diferentes recursos. Es un sistema en el cual existen clientes que realizan peticiones a un servidor, el cual procesa dicho requerimiento y retorna los resultados al cliente apropiado. **Se dan a través de una RED.**
 
-**HTTP**: Protocolo que permite el intercambio de información y es el protocolo de transferencia de hipertexto, el cual permite transferir datos entre navegador y servidor mediante el modelo de petición/respuesta. Cada vez que un servidor recibe una petición HTTP este le devuelve al navegador el recurso solicitado.
+**HTTP**: Protocolo que permite el intercambio de información y es el protocolo de transferencia de hipertexto, el cual permite transferir datos entre **navegador** y **servidor** mediante el modelo de **petición/respuesta**. Cada vez que un servidor recibe una petición HTTP este le devuelve al navegador el recurso solicitado.
 
 
 ![Alt text](./image.png)
@@ -71,10 +69,9 @@ Se realizan cuatro peticiones:
 
 
 
-
 **Navegador:** Aplicación que permite buscar y mostrar el sitio web a los usuarios, encargado de solicitar al servidor web los recursos elegidos por el usuario, y de interpretar y mostrar el contenido al usuario en una ventana, una vez recibida la respuesta del servidor. Se define en las especificaciones de HTML y CSS establecidas por la W3C. La URL permite identificar el recurso que el usuario desea acceder desde el navegador. El navegador inicia la comunicación con el servidor web en el que está alojado el sitio que el usuario desea visitar. El usuario debe conocer el DNS.
 
-**Servidor Web:** Máquina física que posee un determinado sitio web en sus HDD, archivos y BD. Estos archivos se transmiten por Internet a los usuarios cuando acceden desde sus computadoras y dispositivos móviles. Es lo suficientemente grande para almacenar millones de sitios web. Se ejecutan programas de SW que están permanentemente escuchando y respondiendo peticiones realizadas por los clientes web. 
+**Servidor Web:** **Máquina física que posee un determinado sitio web en sus HDD, archivos y BD**. Estos archivos se transmiten por Internet a los usuarios cuando acceden desde sus computadoras y dispositivos móviles. Es lo suficientemente grande para almacenar millones de sitios web. Se ejecutan programas de SW que están permanentemente escuchando y respondiendo peticiones realizadas por los clientes web. 
 
 El servidor comienza su ejecución antes de interactuar con el cliente y generalmente se conecta con múltiples usuarios al mismo tiempo.
 
@@ -110,18 +107,14 @@ Ejemplo:
 
 De esta forma los navegadores consumen estos servicios para traducir el nombre de dominio ingresado por el usuario en la dirección IP del servidor que lo almacena y viceversa.
 
-Recursos Web: Se encuentran organizados lógica y jerárquicamente en el sistema de archivos del servidor remoto donde están alojados. Pueden ser HTML, archivos multimedia, JSON, XML, entre otros. Se encuentran identificados por la URL
+**Recursos Web:** Se encuentran organizados lógica y jerárquicamente en el sistema de archivos del servidor remoto donde están alojados. Pueden ser HTML, archivos multimedia, JSON, XML, entre otros. Se encuentran identificados por la URL
 
 La URL está conformada por: https://url/carpeta/index.html.
 
-**Hipertexto: Herramienta que permite al usuario interactuar con las páginas a través de enlaces que dirigen a otras páginas. De esta manera se cambia el concepto de como leer la información de un documento web, se puede saltar de una parte a otra del documento, sin orden lógico. Es la base funcional y estructural de la web.**
-
-
-
+**Hipertexto**: Herramienta que permite al usuario **interactuar con las páginas a través de enlaces que dirigen a otras páginas**. De esta manera se cambia el concepto de como leer la información de un documento web, se puede saltar de una parte a otra del documento, sin orden lógico. Es la base funcional y estructural de la web.
 
 
 **Sitios Web dinámicos:** Cuando las páginas web tienen contenidos dinámicos, el 
-funcionamiento no es tan lineal como el que vimos 
-anteriormente, sino que pueden intervenir otros agentes del 
+funcionamiento no es tan lineal como un sitio web estático, sino que pueden intervenir otros agentes del 
 lado del servidor, para resolver las peticiones del cliente: hay diversidad 
 de lenguajes del servidor, lógica de negocios en el servidor, del servidor, acceso a bases de datos, FileServer, comunicación entre servidores, etc.

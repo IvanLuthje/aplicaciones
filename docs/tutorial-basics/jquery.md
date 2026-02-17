@@ -114,15 +114,15 @@ Durante este proceso, los usuarios deben esperar hasta que se complete el proces
 
 **Modelo basado en Ajax**
 
-1. El navegador crea una llamada de JavaScript que luego activará XMLHttpRequest.
+1. **El navegador crea una llamada de JavaScript** que luego activará **XMLHttpRequest**, es una interfaz empleada para realizar peticiones HTTP y HTTPS a servidores Web.
 
-2. En segundo plano, el navegador web crea una solicitud HTTP al servidor.
+2. En segundo plano, **el navegador web crea una solicitud HTTP al servidor**.
 
-3. El servidor recibe, recupera y envía los datos al navegador web.
+3. **El servidor recibe**, **recupera y envía los datos al navegador web**.
 
-4. El navegador web recibe los datos solicitados
+4. **El navegador web recibe los datos solicitados**
 
-5. Los datos son mostrados directamente en la página, sin necesidad de recargarla.
+5. **Los datos son mostrados directamente en la página, sin necesidad de recargarla.**
 
 
 Comunicación Tradicional (Síncrona)
@@ -192,12 +192,7 @@ Se deben configurar los siguientes parámetros en orden:
 
 **JSON (Notacion de objetos de JavaScript):** Formato ligero de intercambio de datos, basado en texto y independiente del lenguaje. Utiliza una sintaxis de clave/valor con llaves para objetos, corchetes para arreglos, y se puede parsear para convertirlo al tipo de datos nativo del lenguaje correspondiente.
 
-Conclusiones:
 
-- Es un protocolo/formato de intercambio de datos ✓
-- Se utiliza para serializar/deserializar ✓
-- Está basado en clave/valor ✓
-- Se utiliza parse para convertir JSON a objeto JavaScript ✓
 
 Las aplicaciones web modernas constantemente intercambian datos con el servidor o con otras aplicaciones.
 Para que esto sea posible se debe establecer el protocolo mediante el cual se va a efectuar ese intercambio. Existen una gran variedad de opciones abiertas y estandarizadas, JSON es una de ellas.
@@ -236,22 +231,102 @@ Otras características:
 
 Cuando se manda o recibe un objeto JSON se puede manejar un objeto a la vez. Hay situaciones en las que se necesita enviar más de un objeto. Por ejemplo: enviar múltiples personas a la vez.
 
-## JSONP
+### Estructuras de JSON
+
+Permite representar dos tipos de estructuras de datos en forma de texto:
+
+- **Objetos**: **Encerrados entre llaves**, las **propiedades** corresponden a pares nombre:valor separadas por comas.
+
+- **Arreglos**: **Representan listas de valores**. Están delimitados por **corchetes** y los **valores** se **encuentran separados por comas**
+
+Estas dos estructuras son universales ya que virtualmente todos los lenguajes de programación las soportan de una forma u otra
+
+### Componentes de JSON
+
+- Par nombre:valor: Para asignar a un nombre un valor se debe usar dos puntos
+- Valores: Los tipos de valores en JSON son:
+    - Números
+    - Strings
+    - Booleanos
+    - Array
+    - Objetos
+    - Null				
+
+Un objeto puede estar formado 
+por pares nombre:valor
+y el valor puede ser un objeto 
+o un arreglo
+
+Un arreglo es una colección de valores donde un valor puede 
+ser un objeto o un arreglo
 
 
-Es un método que permite enviar datos estructurados en formato JSON entre dominios distintos. Las siglas provienen de JSON (JavaScript Object Notation) with Padding (es decir, “JSON con acolchado”). La diferencia entre JSON y JSONP está en la envoltura del objeto.
-Para eludir la política de seguridad del mismo origen al solicitar archivos de otros dominios, JSONP no utiliza el objeto XMLHttpRequest como hace el código JSON habitual, sino el elemento script, incluyendo la función de callback. Los scripts sí pueden ser transferidos también entre dominios distintos sin que la SOP sea infringida por ello.
 
-JSONP fue ideado en 2005 por el desarrollador de software Bob Ippolito y ha sido integrado en muchos frameworks de la llamada Web 2.0 como jQuery, como alternativa opcional al JSON convencional.
+### JSON en JS
 
-La solución que ofrece JSONP al obstáculo de la SOP, es utilizar el elemento ```<script>``` para realizar el pedido de datos. 
-En el atributo src de este elemento, pueden escribirse dominios que se deseen restricciones de la SOP. Es mediante este atributo que se indica la URL de dominios ajenos, que nos devuelvan el datos JSON. 
-En este caso, el script solo va a servir de mensajero para transmitir la solicitud JSONP al servidor web correspondiente.
-Para que el cliente pueda procesar los datos más adelante, el servidor los empaqueta como parámetros de una función de JavaScript (función de callback). Esta función está predefinida en el navegador y es transmitida al servidor en la query (como parte de la solicitud) del URL.
+Envío de objetos JSON
+Creamos una variable con el contenido del objeto JSON:
 
 
+Se pueden definir los objetos utilizando la notación tradicional de JavaScript, la notación JSON o combinando ambas
+
+- Con arreglos 
+
+```javascript
+var array = [v1,v2,v3,...vN];
+```
+
+- Con objetos
+
+```javascript
+var objeto = {c1:v1,c2:v2,c3:v3,...cn:vN};
+```
+
+
+Una vez definido el objeto en JS, se deben dar formato JSON a los datos a enviar.
+Para convertir los objetos JavaScript en cadenas de texto que representan el objeto en formato JSON es necesario utilizar la librería json.js
+Esta librería es OpenSource y se puede descargar e importar a nuestro proyecto desde el enlace:
+www.json.org
+El código JavaScript será:
+
+```html
+<script type="text/javascript" src="json.js"></script>;
+```
+Importar la librería
+
+
+```javascript
+var objeto_json = JSON.stringify(objeto);
+```
+Realiza la transformación 
+mencionada
+
+### Recepción de objetos JSON
+
+Los objetos JSON se reciben en forma de cadenas de textos.
+
+Se debe realizar el mapeo en un objeto JavaScript que lo represente.
+
+Para ello, se utliza la función parse de la librería JSON.js, de forma de obtener como resultado el objeto JavaScript equivalente al objeto JSON recibido.
+
+```javascript
+var text = '{"employees: [{'firstName':"Ivan",'LastName':"Luthje" + 'firstName':"Ivan",'LastName':"Luthje"}] }' ;
+```
+
+```javascript
+var obj= JSON.parse(text);
+```
+
+Una vez convertido a un objeto JavaScript se pueden acceder a sus métodos y propiedades
+
+```html
+<script type="text/javascript" src="json.js"></script>;
+<script>document.getElementById("demo").innerHTML = obj.employees[1].firstName + "" + obj.employees[1].lastName;
+</script>
+```
 
 ¿Cómo mostrar en pantalla el objeto JSON devuelto como resultado por la función ajax?
+
 
 ```javascript
 `async function mostrarObjeto() {`
@@ -293,3 +368,56 @@ Para que el cliente pueda procesar los datos más adelante, el servidor los empa
 `mostrarObjeto();`
 ```
 
+### Conclusiones
+
+> - Es un protocolo/formato de intercambio de datos ✓
+> - Se utiliza para serializar/deserializar ✓
+> - Está basado en clave/valor ✓
+> - Se utiliza parse para convertir JSON a objeto JavaScript ✓
+
+## JSONP
+
+
+Es un método que permite enviar datos estructurados en formato JSON entre dominios distintos. Las siglas provienen de JSON (JavaScript Object Notation) with Padding (es decir, “JSON con acolchado”). La diferencia entre JSON y JSONP está en la envoltura del objeto.
+Para eludir la política de seguridad del mismo origen al solicitar archivos de otros dominios, JSONP no utiliza el objeto XMLHttpRequest como hace el código JSON habitual, sino el elemento script, incluyendo la función de callback. Los scripts sí pueden ser transferidos también entre dominios distintos sin que la SOP sea infringida por ello.
+
+JSONP fue ideado en 2005 por el desarrollador de software Bob Ippolito y ha sido integrado en muchos frameworks de la llamada Web 2.0 como jQuery, como alternativa opcional al JSON convencional.
+
+La solución que ofrece JSONP al obstáculo de la SOP, es utilizar el elemento ```<script>``` para realizar el pedido de datos. 
+En el atributo src de este elemento, pueden escribirse dominios que se deseen restricciones de la SOP. Es mediante este atributo que se indica la URL de dominios ajenos, que nos devuelvan el datos JSON. 
+En este caso, el script solo va a servir de mensajero para transmitir la solicitud JSONP al servidor web correspondiente.
+Para que el cliente pueda procesar los datos más adelante, el servidor los empaqueta como parámetros de una función de JavaScript (función de callback). Esta función está predefinida en el navegador y es transmitida al servidor en la query (como parte de la solicitud) del URL.
+
+
+### Modo de funcionamiento
+
+```html
+<script type="text/javascript" < codesnippet></script> 
+src="http://not-origin.url.com/getjson=jsonp=exampleCallback"> 
+```
+
+Al introducir este script de JSONP en el código HTML de una página web y ejecutarlo luego con cualquier cliente, se solicitan datos JSON (getjson) del otro dominio (not-origin-url.com). 
+La query (jsonp=exampleCallback) le comunica al servidor que se trata de una solicitud JSON, y le indica que debe enviar los datos requeridos como parámetros de la función de JavaScript exampleCallback.
+
+```javascript
+var text = '{"employees": [{"firstName": "Ivan", "lastName": "Luthje"}, {"firstName": "Ivan", "lastName": "Luthje"}]}';
+```
+
+La función de callback es ejecutada por el navegador. De esta forma, se permite al navegador procesar los datos del URL externo solicitados
+
+
+Para indicar a jQuery que el dato de respuesta llega 
+en JSONP utilizamos la variable de configuración dataType con el valor jsonp.
+
+
+### ¿Qué tan seguro es JSONP?
+
+Si el servidor contactado tiene puntos débiles que permitan a atacantes realizar JavaScript injections no deseadas (incorporaciones de código JavaScript), el servidor de origen también se expone automáticamente a un riesgo inmediato, sobre todo porque no solo se pueden solicitar documentos JSON (como en el ejemplo), sino todo tipo de datos.
+Otros patrones de ataque que se sirven del método JSONP son los siguientes:
+
+- RFD (reflected file download): JSONP es vulnerable a los llamados ataques RFD, en los que el cliente o usuario aparentemente descarga datos del dominio final deseado. Lo que ocurre, en realidad, es que se cargan archivos o URL maliciosos, lo cual suele tener su origen en una manipulación de las funciones callback(de devolución de llamada).
+
+- CSRF/XSRF (cross-site-request-forgery) puesto que el elemento `<script>` ignora la SOP, una página maliciosa puede solicitar datos de otras aplicaciones web, guardarlos y analizarlos. Si el usuario está registrado en la página atacada, los atacantes podrían acceder a datos privados como, por ejemplo, los datos de inicio de sesión, utilizando las solicitudes entre dominios“falseadas”.
+
+Al utilizar scripts de JSONP en un proyecto web, asegurar de que no solo el servidor esté protegido contra tales ataques y contra cualquier malware, sino de que también lo estén los de las aplicaciones web con las que estén en contacto. 
+Nunca debe permitirse la incorporación de código JSONP que solicite datos de fuentes poco seguras.

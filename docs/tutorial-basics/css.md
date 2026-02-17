@@ -4,23 +4,23 @@ sidebar_position: 3
 
 # CSS
 
-Lenguaje de hojas de estilos creado para controlar la presentación y aspecto de los documentos HTML. 
+Lenguaje de hojas de estilos creado para **controlar la presentación y aspecto de los documentos HTML**. 
 
-Es la mejor forma de separar el contenido de la página web de su presentación. Definido como un estándar por la W3C. En el CSS se puede definir como se muestran los elementos del documento HTML, como por ejemplo color, tamaño, tipo de letra, separación horizontal y vertical entre elementos, posición de cada elemento en la pantalla, etc.
+Es la mejor forma de **separar el contenido de la página web de su presentación**. Definido como un estándar por la W3C. En el CSS **se puede definir como se muestran los elementos del documento HTML, como por ejemplo color, tamaño, tipo de letra, separación horizontal y vertical entre elementos, posición de cada elemento en la pantalla, etc.**
 
-El CSS obliga a crear documentos HTML semánticos, mejoran la accesibilidad del documento, reduce la complejidad de su mantenimiento, visualizar el mismo documento en dispositivos diferentes y se puede controlar el estilo y formato de múltiples páginas simultáneamente.
+El CSS obliga a **crear documentos HTML semánticos, mejoran la accesibilidad del documento, reduce la complejidad de su mantenimiento, visualizar el mismo documento en dispositivos diferentes y se puede controlar el estilo y formato de múltiples páginas simultáneamente.**
 
-Esta forma de definir el aspecto de los elemento no es la más adecuada, ya que si tuviéramos una página con 50 elementos, habría que insertar 50 etiquetas Font, del mismo modo si un sitio web se compone de 10.000 etiquetas, habrá que definir 10.000 atributos
+Esta forma de definir el aspecto de los elementos no es la más adecuada, ya que si tuviéramos una página con 50 elementos, habría que insertar 50 etiquetas Font, del mismo modo si un sitio web se compone de 10.000 etiquetas, habrá que definir 10.000 atributos
 
 ## Inserción en documentos
 
-Con CSS se pueden establecer los mismos estilos con menor esfuerzo y sin ensuciar el código HTML de los contenidos.
+Con CSS se pueden establecer los mismos estilos con **menor esfuerzo y sin ensuciar el código HTML de los contenidos**.
 
 Flexibilidad y diferentes opciones para hacer una misma tarea. Existen al menos 3 opciones para incluir CSS en un documento HTML:
 
-- **Incluir directamente CSS en los elementos HTML:** Es el peor y menos utilizado ya que tienen el inconveniente que la utilización de etiquetas font, se utiliza en situaciones en las que se debe incluir un estilo muy específico para un solo elemento concreto, se define con el atributo style de los elementos definidos en HTML.
-- **Incluir CSS dentro del documento HTML:** Se define dentro del head con la etiqueta style y se utiliza cuando un número pequeño de estilos se definen sobre un único documento. Soluciona el problema anterior pero se aplica solamente en un solo documento.
-- **Definir CSS en un archivo externo (Recomendado):** Se definen en un archivo de extensión .css y el nombre del archivo se define dentro del head por medio de la etiqueta link. El mantenimiento se simplifica al máximo y se puede utilizar en todos los documentos indicando ese archivo .css.
+- **Incluir directamente CSS en los elementos HTML:** Es el **peor y menos utilizado** ya que tienen el inconveniente que la utilización de **etiquetas font**, se utiliza en situaciones en las que se debe incluir un **estilo muy específico para un solo elemento concreto**, se define con el atributo **style de los elementos definidos en HTML**.
+- **Incluir CSS dentro del documento HTML:** Se define dentro del **head con la etiqueta style y se utiliza cuando un número pequeño de estilos se definen sobre un único documento**. Soluciona el problema anterior pero **se aplica solamente en un solo documento**.
+- **Definir CSS en un archivo externo (Recomendado):** Se definen en un archivo de extensión .css y el **nombre del archivo** se define **dentro del head por medio de la etiqueta link**. El **mantenimiento se simplifica al máximo** y se puede utilizar en todos los documentos indicando ese archivo .css.
 
 ## Componentes
 
@@ -69,6 +69,14 @@ Para resolver colisiones de estilos se siguen estas reglas:
  **Contenido**: Espacio que contiene elementos HTML.
 
 ## Propiedades de CSS
+
+**Background**: Establece algunas o todas las propiedades del color y/o imagen de fondo de un elemento.
+
+**Propiedades de texto:** Establece distintos atributos que definen la forma en que se mostrará el texto contenido en un elemento.
+
+**Propiedades de enlaces:** Los links pueden incluir cualquiera de las propiedades vistas hasta ahora. Tienen propiedades que dependen de su estado
+
+
 
 **Width-Height:** Se utilizan para controlar el ancho y el alto de los elementos, permitiendo definir las dimensiones del área que tiene el contenido de la caja.
 
@@ -131,14 +139,15 @@ El ancho total será de 300+50+50+30+30+10=480px
 La altura total será de 300+10+10=320px
 
 - Un motivo que puede traer problemas es la incompatibilidad que existe entre los distintos navegadores
-De acuerdo a la versión del navegador hay 2 modos de funcionamiento:
 
-    **Modo Quirks:** Son aquellos que no son compatibles con los estándares publicados por la W3C.
+        De acuerdo a la versión del navegador hay 2 modos de funcionamiento:
 
-    **Modo Estándar:** Son compatibles con los nuevos estándares
+            **Modo Quirks:** Son aquellos que no son compatibles con los estándares publicados por la W3C.
 
-    Su diferencia se encuentra en el tratamiento sobre del modelo de cajas que influye sobre el diseño de la página.
-    Los navegadores en modo Quirk consideran que el ancho del elemento (propiedad Width) incluye tanto el padding como los bordes.
+            **Modo Estándar:** Son compatibles con los nuevos estándares
+
+            Su diferencia se encuentra en el tratamiento sobre del modelo de cajas que influye sobre el diseño de la página.
+            Los navegadores en modo Quirk consideran que el ancho del elemento (propiedad Width) incluye tanto el padding como los bordes.
 
 ## Dimensiones de los elementos 
 
@@ -166,10 +175,22 @@ Las dimensiones se pueden definir de acuerdo a las siguientes reglas:
     - Animaciones de elementos HTML sin el uso de Flash y JS.
     - Transiciones.
 
+## Bootstrap
+
+Provee un conjunto de elementos personalizados como distintas tipografías, formularios, botones, tablas, carrousel de imágenes, y muchas otras, incluyendo plugins JavaScript opcionales.
+La herramienta Grid System permite definir el layout del sitio de manera sencilla, permitiendo dividir la página hasta en 12 columnas, adaptables a cualquier dispositivo.
+Es compatible con todos los navegadores.
+Soporte: mucha documentación y tutoriales en la web.
+Existe mucha variedad de plantillas y temas predefinidos
+Facil de usar
+
+
 ## Buenas prácticas de CSS
 
 - Minimizar requerimientos HTTP puede reducir el tiempo de respuesta
 - Los navegadores tienen sus propios estilos, es recomendable tener estilos que se normalicen o reseteen lo estilos de los navegadores.
+
+
 
 ## Normalizadores
 
